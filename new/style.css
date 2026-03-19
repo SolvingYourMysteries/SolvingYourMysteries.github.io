@@ -420,6 +420,49 @@ iframe { display: block; }
   flex-shrink: 0;
 }
 
+/* ---- ABOUT PAGE EXTRAS ------------------------------------ */
+.about-bio .body-text {
+  margin-bottom: 0.75rem;
+}
+
+.about-pull-quote {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.75rem 0;
+  margin: 2rem 0;
+}
+.about-pull-quote p {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--sepia);
+  line-height: 1.5;
+}
+
+.about-milestone {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: var(--parchment);
+  border-left: 3px solid var(--gold);
+  padding: 1.5rem 1.75rem;
+  margin: 2rem 0;
+}
+.milestone-icon {
+  font-size: 1.25rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.about-milestone p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.75;
+}
+
 /* ---- ABOUT TEASER ----------------------------------------- */
 .about-teaser {
   padding: 8rem 0;
@@ -1036,6 +1079,55 @@ iframe { display: block; }
   border-color: var(--parchment-dark);
 }
 
+/* ---- ABOUT IMAGE RAIL ------------------------------------- */
+.about-image-rail {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.rail-image { display: flex; flex-direction: column; gap: 0.6rem; }
+.rail-image .image-frame {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+}
+.rail-image .image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+.rail-image:hover .image-frame img {
+  transform: scale(1.04);
+}
+.rail-caption {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--sepia);
+  text-transform: uppercase;
+  padding-left: 0.25rem;
+}
+
+/* on mobile, stack images above the bio instead */
+@media (max-width: 900px) {
+  .about-main-inner {
+    grid-template-columns: 1fr;
+  }
+  .about-image-rail {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .rail-image {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 140px;
+  }
+}
+
 /* ---- ABOUT MAIN ------------------------------------------- */
 .about-main {
   padding: 8rem 0;
@@ -1043,8 +1135,8 @@ iframe { display: block; }
 }
 .about-main-inner {
   display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 6rem;
+  grid-template-columns: 360px 1fr;
+  gap: 5rem;
   align-items: start;
 }
 .image-frame-large { aspect-ratio: 4/5; }
