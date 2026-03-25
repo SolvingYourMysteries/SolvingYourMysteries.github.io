@@ -1254,6 +1254,13 @@ iframe { display: block; }
   color: var(--ink-soft);
 }
 
+.credential-item ul {
+  font-family: var(--font-body);
+  font-size: 0.925rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+}
+
 /* ---- FOOTER ----------------------------------------------- */
 .footer {
   background: var(--ink);
