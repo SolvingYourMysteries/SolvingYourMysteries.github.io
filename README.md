@@ -1,1 +1,0 @@
-# SolvingYourMysteries.github.io

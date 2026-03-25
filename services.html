@@ -1,286 +1,328 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Solving your Mysteries — Genealogy & DNA Family Trees</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-
-    
-    html,body { font-family: "Inter", system-ui, sans-serif; }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(12px);
-      animation: fadeIn 0.7s ease forwards;
-    }
-    .delay-1 { animation-delay: .15s }
-    .delay-2 { animation-delay: .3s }
-    .delay-3 { animation-delay: .45s }
-
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.55));
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.45);
-    }
-
-    .portrait {
-      background: linear-gradient(135deg, #DCFCE7, #E0F2FE);
-    }
-
-    .dna-divider {
-      animation: floaty 6s ease-in-out infinite;
-    }
-
-    @keyframes floaty {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
-    }
-
-    
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — Solving Your Mysteries</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="bg-gradient-to-b from-white via-emerald-50 to-emerald-100 text-slate-800">
-
-  <!-- HEADER -->
-  <header class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-    <a href="index.html" class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-full bg-emerald-400/20 flex items-center justify-center">
-        <svg class="w9 h-9 dna" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-          <circle cx="18" cy="18" r="16" fill="url(#g)" opacity="0.12"/>
-          <path fill="#77B255" d="M3.019 26.246l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFD983" d="M6.362 29.587l3.431 3.432l-.923.923l-3.43-3.432z"></path><path fill="#FFAC33" d="M6.273 24.237l3.432 3.432l-.923.923L5.35 25.16z"></path><path fill="#EA596E" d="M8.998 26.962l3.432 3.432l-.923.923l-3.431-3.432zm3.909-9.359l3.431 3.432l-.923.923l-3.431-3.432z"></path><path fill="#FFAC33" d="M15.631 20.329l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#77B255" d="M14.97 14.377l3.432 3.432l-.922.923l-3.432-3.432z"></path><path fill="#FFD983" d="M18.277 17.683l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFAC33" d="M17.616 11.731l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#EA596E" d="M20.923 15.038l3.432 3.431l-.923.923l-3.431-3.432zM24.387 4.96l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFAC33" d="M27.694 8.267l3.432 3.431l-.923.923l-3.432-3.432z"></path><path fill="#77B255" d="M27.013 2.252l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFD983" d="M30.36 5.6l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#9266CC" d="M24.922.812c-2.52 2.52-2.601 6.145-2.396 9.806c.501.028 1.002.061 1.502.094c.39.026.775.051 1.159.074c-.198-3.286-.199-6.299 1.606-8.104c.727-.703.955-1.653.447-2.166c-.535-.54-1.542-.497-2.318.296z"></path><path fill="#3B88C3" d="M13.146 25.65l-.153-2.66c-.026-.445-.058-.899-.074-1.332c-.296-.296-2.466-.349-2.653-.162c.013.44.047.884.071 1.327c.028.502.126 2.275.149 2.66c.054.91.096 1.806.086 2.656c.259.259 2.371.437 2.645.162a36.931 36.931 0 0 0-.071-2.651z"></path><path fill="#55ACEE" d="M13.22 28.3l-2.649-.162c-.026 2.209-.384 4.145-1.687 5.448a1.322 1.322 0 1 0 1.87 1.871c2.423-2.422 2.467-7.174 2.466-7.157z"></path><path fill="#9266CC" d="M25.354 13.447c-.501-.028-1.003-.061-1.503-.094c-.389-.026-.775-.051-1.158-.074c.198 3.285.199 6.299-1.607 8.104c-1.804 1.804-4.813 1.805-8.094 1.607c-.386-.023-2.159-.14-2.656-.168c-3.667-.206-7.297-.126-9.82 2.397a1.322 1.322 0 0 0 1.871 1.87c1.805-1.804 4.815-1.806 8.098-1.608c.385.023 2.161.14 2.66.168c3.662.205 7.289.125 9.811-2.396c2.521-2.52 2.603-6.145 2.398-9.806z"></path><path fill="#744EAA" d="M25.354 13.447c-.028-.501-.145-2.277-.168-2.66a51.95 51.95 0 0 1-.064-1.332c-.336-.021-2.1-.133-2.653-.163c.013.44.032.883.056 1.326c.028.501.145 2.277.168 2.661c.055.914.091 1.804.081 2.656c.333.021 2.094.132 2.645.162a36.316 36.316 0 0 0-.065-2.65z"></path><path fill="#55ACEE" d="M35.581 8.827c-.42-.436-1.385-.601-2.291.353c-1.805 1.805-4.817 1.806-8.104 1.607c-.384-.023-2.16-.141-2.661-.169c-3.66-.205-7.286-.123-9.806 2.397c-2.215 2.215-2.545 5.284-2.453 8.48c.553.03 2.319.142 2.653.162c-.098-2.755.113-5.214 1.671-6.772c1.805-1.805 4.818-1.805 8.104-1.607c.383.023 2.16.14 2.661.168c3.661.205 7.286.124 9.806-2.396c.886-.869.84-1.787.42-2.223z"></path>
-        </svg>
-      </div>
-      <span class="font-semibold">Solving Your Mysteries</span>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon"><img src="img/dna.svg" height="25px"/></span>
+      Solving Your Mysteries
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="index.html" class="hover:text-slate-900">Home</a>
-      <a href="about.html" class="font-medium text-emerald-600">About</a>
-      <a href="services.html" class="font-medium text-emerald-600">Services</a>
-      <a href="index.html#contact" class="px-4 py-2 rounded-lg bg-emerald-500 text-white hover:scale-105 transition">Get started</a>
-    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#enquire" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </nav>
 
-        <!-- mobile menu toggle -->
-        <div class="md:hidden">
-          <button id="mobileToggle" aria-label="Toggle menu" class="p-2 rounded-lg bg-white/60 glass">
-            <svg class="w-6 h-6 text-slate-700" viewBox="0 0 36 36" fill="none">
-              <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-              <circle cx="18" cy="18" r="16" fill="url(#g)" opacity="0.12"/>
-              <path fill="#77B255" d="M3.019 26.246l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFD983" d="M6.362 29.587l3.431 3.432l-.923.923l-3.43-3.432z"></path><path fill="#FFAC33" d="M6.273 24.237l3.432 3.432l-.923.923L5.35 25.16z"></path><path fill="#EA596E" d="M8.998 26.962l3.432 3.432l-.923.923l-3.431-3.432zm3.909-9.359l3.431 3.432l-.923.923l-3.431-3.432z"></path><path fill="#FFAC33" d="M15.631 20.329l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#77B255" d="M14.97 14.377l3.432 3.432l-.922.923l-3.432-3.432z"></path><path fill="#FFD983" d="M18.277 17.683l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFAC33" d="M17.616 11.731l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#EA596E" d="M20.923 15.038l3.432 3.431l-.923.923l-3.431-3.432zM24.387 4.96l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFAC33" d="M27.694 8.267l3.432 3.431l-.923.923l-3.432-3.432z"></path><path fill="#77B255" d="M27.013 2.252l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFD983" d="M30.36 5.6l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#9266CC" d="M24.922.812c-2.52 2.52-2.601 6.145-2.396 9.806c.501.028 1.002.061 1.502.094c.39.026.775.051 1.159.074c-.198-3.286-.199-6.299 1.606-8.104c.727-.703.955-1.653.447-2.166c-.535-.54-1.542-.497-2.318.296z"></path><path fill="#3B88C3" d="M13.146 25.65l-.153-2.66c-.026-.445-.058-.899-.074-1.332c-.296-.296-2.466-.349-2.653-.162c.013.44.047.884.071 1.327c.028.502.126 2.275.149 2.66c.054.91.096 1.806.086 2.656c.259.259 2.371.437 2.645.162a36.931 36.931 0 0 0-.071-2.651z"></path><path fill="#55ACEE" d="M13.22 28.3l-2.649-.162c-.026 2.209-.384 4.145-1.687 5.448a1.322 1.322 0 1 0 1.87 1.871c2.423-2.422 2.467-7.174 2.466-7.157z"></path><path fill="#9266CC" d="M25.354 13.447c-.501-.028-1.003-.061-1.503-.094c-.389-.026-.775-.051-1.158-.074c.198 3.285.199 6.299-1.607 8.104c-1.804 1.804-4.813 1.805-8.094 1.607c-.386-.023-2.159-.14-2.656-.168c-3.667-.206-7.297-.126-9.82 2.397a1.322 1.322 0 0 0 1.871 1.87c1.805-1.804 4.815-1.806 8.098-1.608c.385.023 2.161.14 2.66.168c3.662.205 7.289.125 9.811-2.396c2.521-2.52 2.603-6.145 2.398-9.806z"></path><path fill="#744EAA" d="M25.354 13.447c-.028-.501-.145-2.277-.168-2.66a51.95 51.95 0 0 1-.064-1.332c-.336-.021-2.1-.133-2.653-.163c.013.44.032.883.056 1.326c.028.501.145 2.277.168 2.661c.055.914.091 1.804.081 2.656c.333.021 2.094.132 2.645.162a36.316 36.316 0 0 0-.065-2.65z"></path><path fill="#55ACEE" d="M35.581 8.827c-.42-.436-1.385-.601-2.291.353c-1.805 1.805-4.817 1.806-8.104 1.607c-.384-.023-2.16-.141-2.661-.169c-3.66-.205-7.286-.123-9.806 2.397c-2.215 2.215-2.545 5.284-2.453 8.48c.553.03 2.319.142 2.653.162c-.098-2.755.113-5.214 1.671-6.772c1.805-1.805 4.818-1.805 8.104-1.607c.383.023 2.16.14 2.661.168c3.661.205 7.286.124 9.806-2.396c.886-.869.84-1.787.42-2.223z"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
-    
-      <!-- mobile nav panel -->
-      <div id="mobileNav" class="hidden px-6 pb-6">
-        <div class="flex flex-col gap-3 max-w-3xl mx-auto">
-          <a href="index.html" class="py-2 px-4 rounded-lg hover:bg-white/40">Home</a>
-          <a href="about.html" class="py-2 px-4 rounded-lg hover:bg-white/40">About</a>
-          <a href="services.html" class="py-2 px-4 rounded-lg hover:bg-white/40">Services</a>
-          <a href="index.html#contact" class="py-2 px-4 rounded-lg bg-emerald-400 text-white text-center rounded">Get started</a>
-        </div>
-      </div>
-
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-6">
-
-    <!-- INTRO -->
-    <section class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-      <div class="lg:col-span-2 fade-in delay-1">
-        <h1 class="text-4xl font-extrabold">Research Services</h1>
-        <p class="mt-4 text-lg text-slate-600">
-          My work combines traditional, document-based research with genetic genealogy to build family trees and conclusions that are structured and backed by evidence. Take a look at my services and specialities below. 
-
-          If you have any questions, please feel free to reach out!
-        </p>
-        <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">Adoption & Unknown Parentage</h2>
-
-        <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-          These cases require discretion and methodical evidence-building. Whether you’re looking for a biological parent or want to know more about an adoption from a hundred years ago, I use all the resources at my disposal to piece together the strongest possible case supported by verifiable records.
-          I build carefully structured cases using:
-        </p>
-        <ul class="list-disc list-outside ml-5 space-y-2 text-slate-800">
-          <li class="leading-relaxed">DNA clustering techniques</li>
-          <li class="leading-relaxed">Family tree reconstruction of matches</li>
-          <li class="leading-relaxed">Timeline and geographic comparison</li>
-          <li class="leading-relaxed">Civil registration and corroborating documentation</li>
-          <li class="leading-relaxed">Indirect evidence and elimination methodology</li>
-        </ul>
-    
-        <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">Genetic Genealogy</h2>
-
-          <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-            DNA is a powerful research tool not only for adoption cases, but for solving complex family questions that span generations.
-            I analyze DNA matches to
-            
-          </p>
-          <ul class="list-disc list-outside ml-5 space-y-2 text-slate-800">
-            <li class="leading-relaxed">Break through brick walls</li>
-            <li class="leading-relaxed">Confirm or challenge existing research</li>
-            <li class="leading-relaxed">Identify shared ancestors</li>
-            <li class="leading-relaxed">Reconstruct extended family networks</li>
-            <li class="leading-relaxed">Support documentary findings with genetic evidence</li>
-          </ul>
-
-          <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-
-            Genetic genealogy allows us to see patterns that traditional records cannot reveal, but it is most effective when combined with careful documentary research.
-          </p>
-
-          <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">Document-Based Research</h2>
-
-            <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-              Traditional archival research forms the foundation of my work. I locate and evaluate original records to build conclusions that can be trusted.
-I conduct a thorough investigation of original records, including but not limited to:
-
-            </p>
-            <ul class="list-disc list-outside ml-5 space-y-2 text-slate-800">
-              <li class="leading-relaxed">Civil registrations (birth, marriage, death)</li>
-              <li class="leading-relaxed">Parish and church records</li>
-              <li class="leading-relaxed">Probate records and wills</li>
-              <li class="leading-relaxed">Census and electoral rolls</li>
-              <li class="leading-relaxed">Military, land, and court records</li>
-              <li class="leading-relaxed">Newspaper archives</li>
-              <li class="leading-relaxed">Immigration and passenger lists</li>
-              <li class="leading-relaxed">Local archival collections</li>
-            </ul>
-
-            <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">Brick Wall and Complex Cases</h2>
-
-            <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-              I re-evaluate evidence, reconstruct family networks, and test multiple hypotheses to break through difficult research problems. I aim to:
-
-
-            </p>
-
-            <ul class="list-disc list-outside ml-5 space-y-2 text-slate-800">
-              <li class="leading-relaxed">Reconstruct entire family networks to identify one individual</li>
-              <li class="leading-relaxed">Analyze migration patterns</li>
-              <li class="leading-relaxed">Identify naming traditions and kinship structures</li>
-              <li class="leading-relaxed">Evaluate conflicting or incomplete records</li>
-              <li class="leading-relaxed">Develop and test multiple research hypotheses</li>
-            </ul>
-            
-            <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">International & Multi-Regional Research</h2>
-
-            <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-              I have conducted genealogical research across multiple regions, each with its own archival systems, languages, and historical complexities. These regions include, but aren’t limited to:
-
-
-            </p>
-            <ul class="list-disc list-outside ml-5 space-y-2 text-slate-800">
-              <li class="leading-relaxed">North America (including Mexico)</li>
-              <li class="leading-relaxed">Puerto Rico and parts of the Caribbean</li>
-              <li class="leading-relaxed">Western Europe</li>
-              <li class="leading-relaxed">Select regions of Eastern Europe (depending on the survival of records)</li>
-              <li class="leading-relaxed">Australia</li>
-              <li class="leading-relaxed">New Zealand</li>
-            </ul>
-
-            <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">Historical Context & Narrative Reporting</h2>
-
-            <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-              My reports may include:
-
-
-            </p>
-            <ul class="list-disc list-outside ml-5 space-y-2 text-slate-800">
-              <li class="leading-relaxed">Social and economic background</li>
-              <li class="leading-relaxed">Occupational research</li>
-              <li class="leading-relaxed">Geographic and community context</li>
-              <li class="leading-relaxed">Historical events influencing family movement</li>
-              <li class="leading-relaxed">Clearly written research summaries with full citations</li> 
-            </ul>
-
-            <h2 class="text-lg md:text-xl font-semibold text-emerald-700 mt-5 mb-2">My Research Approach</h2>
-
-            <p class="mt-4 text-slate-600 leading-relaxed max-w-[70ch] text-base">
-              I prioritize evidence over assumption in every case. 
-
-              My research is guided by a structured plan, supported by transparent analysis, and fully documented with proper source citations. I handle sensitive discoveries with care and provide realistic, honest evaluations of what the records can, and cannot, prove.
-              
-              I am honest about the limits of genealogy and how those limitations may influence the outcome of your research.              
-            </p>
-      </div>
-
-      <!-- portrait -->
-      <div class="hidden lg:flex flex-col gap-16 items-end sticky top-24 h-fit">
-
-        <div class="portrait w-48 h-48 rounded-2xl shadow-lg overflow-hidden">
-          <img src="services_2.jpeg" class="w-full h-full object-cover" />
-        </div>
-      
-        <div class="portrait w-48 h-48 rounded-2xl shadow-lg overflow-hidden">
-          <img src="services_3.jpeg" class="w-full h-full object-cover" />
-        </div>
-      
-        <div class="portrait w-48 h-48 rounded-2xl shadow-lg overflow-hidden">
-          <img src="services_4.jpeg" class="w-full h-full object-cover" />
-        </div>
-      
-      </div>
-    </section>
-
-    <!-- DIVIDER -->
-    <div class="flex justify-center my-10 fade-in delay-3">
-      <svg class="w-24 h-24 dna" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-        <circle cx="18" cy="18" r="16" fill="url(#g)" opacity="0.12"/>
-        <path fill="#77B255" d="M3.019 26.246l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFD983" d="M6.362 29.587l3.431 3.432l-.923.923l-3.43-3.432z"></path><path fill="#FFAC33" d="M6.273 24.237l3.432 3.432l-.923.923L5.35 25.16z"></path><path fill="#EA596E" d="M8.998 26.962l3.432 3.432l-.923.923l-3.431-3.432zm3.909-9.359l3.431 3.432l-.923.923l-3.431-3.432z"></path><path fill="#FFAC33" d="M15.631 20.329l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#77B255" d="M14.97 14.377l3.432 3.432l-.922.923l-3.432-3.432z"></path><path fill="#FFD983" d="M18.277 17.683l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFAC33" d="M17.616 11.731l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#EA596E" d="M20.923 15.038l3.432 3.431l-.923.923l-3.431-3.432zM24.387 4.96l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFAC33" d="M27.694 8.267l3.432 3.431l-.923.923l-3.432-3.432z"></path><path fill="#77B255" d="M27.013 2.252l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFD983" d="M30.36 5.6l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#9266CC" d="M24.922.812c-2.52 2.52-2.601 6.145-2.396 9.806c.501.028 1.002.061 1.502.094c.39.026.775.051 1.159.074c-.198-3.286-.199-6.299 1.606-8.104c.727-.703.955-1.653.447-2.166c-.535-.54-1.542-.497-2.318.296z"></path><path fill="#3B88C3" d="M13.146 25.65l-.153-2.66c-.026-.445-.058-.899-.074-1.332c-.296-.296-2.466-.349-2.653-.162c.013.44.047.884.071 1.327c.028.502.126 2.275.149 2.66c.054.91.096 1.806.086 2.656c.259.259 2.371.437 2.645.162a36.931 36.931 0 0 0-.071-2.651z"></path><path fill="#55ACEE" d="M13.22 28.3l-2.649-.162c-.026 2.209-.384 4.145-1.687 5.448a1.322 1.322 0 1 0 1.87 1.871c2.423-2.422 2.467-7.174 2.466-7.157z"></path><path fill="#9266CC" d="M25.354 13.447c-.501-.028-1.003-.061-1.503-.094c-.389-.026-.775-.051-1.158-.074c.198 3.285.199 6.299-1.607 8.104c-1.804 1.804-4.813 1.805-8.094 1.607c-.386-.023-2.159-.14-2.656-.168c-3.667-.206-7.297-.126-9.82 2.397a1.322 1.322 0 0 0 1.871 1.87c1.805-1.804 4.815-1.806 8.098-1.608c.385.023 2.161.14 2.66.168c3.662.205 7.289.125 9.811-2.396c2.521-2.52 2.603-6.145 2.398-9.806z"></path><path fill="#744EAA" d="M25.354 13.447c-.028-.501-.145-2.277-.168-2.66a51.95 51.95 0 0 1-.064-1.332c-.336-.021-2.1-.133-2.653-.163c.013.44.032.883.056 1.326c.028.501.145 2.277.168 2.661c.055.914.091 1.804.081 2.656c.333.021 2.094.132 2.645.162a36.316 36.316 0 0 0-.065-2.65z"></path><path fill="#55ACEE" d="M35.581 8.827c-.42-.436-1.385-.601-2.291.353c-1.805 1.805-4.817 1.806-8.104 1.607c-.384-.023-2.16-.141-2.661-.169c-3.66-.205-7.286-.123-9.806 2.397c-2.215 2.215-2.545 5.284-2.453 8.48c.553.03 2.319.142 2.653.162c-.098-2.755.113-5.214 1.671-6.772c1.805-1.805 4.818-1.805 8.104-1.607c.383.023 2.16.14 2.661.168c3.661.205 7.286.124 9.806-2.396c.886-.869.84-1.787.42-2.223z"></path>
-      </svg>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow reveal">What I offer</p>
+      <h1 class="page-hero-title reveal">Research<br><em>Services</em></h1>
+      <p class="page-hero-sub reveal">My work combines traditional, document-based research with genetic genealogy to build family trees and conclusions that are structured and backed by evidence. If you have any questions, please feel free to reach out.</p>
     </div>
+    <div class="page-hero-ornament">&#9753;</div>
+  </section>
 
-    <!-- CTA -->
-    <section class="mt-14 mb-16 fade-in">
-      <div class="max-w-3xl mx-auto text-center p-8 glass rounded-2xl">
-        <h3 class="text-xl font-semibold">Let’s explore your story together</h3>
-        <p class="mt-2 text-slate-600">
-          If you’re curious about your roots or facing a stubborn brick wall,
-          I’d love to help.
-        </p>
-        <a href="index.html#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-emerald-500 text-white font-medium hover:scale-105 transition">
-          Book a free consultation
-        </a>
+  <!-- SERVICES SUBNAV -->
+  <nav class="services-subnav" aria-label="Jump to service">
+    <div class="container">
+      <ul class="services-subnav-list">
+        <li><a href="#adoption">Adoption &amp; Unknown Parentage</a></li>
+        <li><a href="#genetic">Genetic Genealogy</a></li>
+        <li><a href="#documents">Document-Based Research</a></li>
+        <li><a href="#brickwall">Brick Wall &amp; Complex Cases</a></li>
+        <li><a href="#international">International Research</a></li>
+        <li><a href="#narrative">Historical Context &amp; Reporting</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SERVICES DETAIL -->
+  <section class="services-detail">
+    <div class="container">
+
+      <!-- 01 ADOPTION -->
+      <article class="service-detail-item" id="adoption">
+        <div class="service-detail-number">01</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h2>Adoption &amp; Unknown Parentage</h2>
+            <div class="service-detail-line"></div>
+          </div>
+          <p class="service-intro reveal">These cases require discretion and methodical evidence-building — whether you're looking for a biological parent or want to understand an adoption from a hundred years ago.</p>
+          <div class="service-detail-body reveal">
+            <p>I use all the resources at my disposal to piece together the strongest possible case supported by verifiable records. Each situation is unique, and I approach every case with sensitivity and a commitment to following the evidence wherever it leads.</p>
+          </div>
+          <div class="service-includes reveal">
+            <h4>I build carefully structured cases using:</h4>
+            <ul>
+              <li>DNA clustering techniques</li>
+              <li>Family tree reconstruction of matches</li>
+              <li>Timeline and geographic comparison</li>
+              <li>Civil registration and corroborating documentation</li>
+              <li>Indirect evidence and elimination methodology</li>
+            </ul>
+          </div>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Enquire About This Service</a>
+        </div>
+      </article>
+
+      <div class="service-divider"></div>
+
+      <!-- 02 GENETIC GENEALOGY -->
+      <article class="service-detail-item reverse" id="genetic">
+        <div class="service-detail-number">02</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h2>Genetic Genealogy</h2>
+            <div class="service-detail-line"></div>
+          </div>
+          <p class="service-intro reveal">DNA is a powerful research tool — not only for adoption cases, but for solving complex family questions that span generations.</p>
+          <div class="service-detail-body reveal">
+            <p>I analyse DNA matches to uncover patterns that traditional records cannot reveal. Genetic genealogy is most effective when combined with careful documentary research, and I always use both in tandem to reach the strongest possible conclusions.</p>
+          </div>
+          <div class="service-includes reveal">
+            <h4>DNA analysis can help to:</h4>
+            <ul>
+              <li>Break through brick walls</li>
+              <li>Confirm or challenge existing research</li>
+              <li>Identify shared ancestors</li>
+              <li>Reconstruct extended family networks</li>
+              <li>Support documentary findings with genetic evidence</li>
+            </ul>
+          </div>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Enquire About This Service</a>
+        </div>
+      </article>
+
+      <div class="service-divider"></div>
+
+      <!-- 03 DOCUMENT-BASED -->
+      <article class="service-detail-item" id="documents">
+        <div class="service-detail-number">03</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h2>Document-Based Research</h2>
+            <div class="service-detail-line"></div>
+          </div>
+          <p class="service-intro reveal">Traditional archival research forms the foundation of my work. I locate and evaluate original records to build conclusions that can be trusted.</p>
+          <div class="service-detail-body reveal">
+            <p>I conduct a thorough investigation of primary sources across a wide range of archive types and collections, both national and local. Every record I cite is properly sourced so you always know the basis for each finding.</p>
+          </div>
+          <div class="service-includes reveal">
+            <h4>Records I work with include:</h4>
+            <ul>
+              <li>Civil registrations (birth, marriage, death)</li>
+              <li>Parish and church records</li>
+              <li>Probate records and wills</li>
+              <li>Census and electoral rolls</li>
+              <li>Military, land, and court records</li>
+              <li>Newspaper archives</li>
+              <li>Immigration and passenger lists</li>
+              <li>Local archival collections</li>
+            </ul>
+          </div>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Enquire About This Service</a>
+        </div>
+      </article>
+
+      <div class="service-divider"></div>
+
+      <!-- 04 BRICK WALL -->
+      <article class="service-detail-item reverse" id="brickwall">
+        <div class="service-detail-number">04</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h2>Brick Wall &amp; Complex Cases</h2>
+            <div class="service-detail-line"></div>
+          </div>
+          <p class="service-intro reveal">I re-evaluate evidence, reconstruct family networks, and test multiple hypotheses to break through difficult research problems.</p>
+          <div class="service-detail-body reveal">
+            <p>Brick wall cases demand a different kind of thinking: lateral, systematic, and patient. Rather than repeating the same searches, I step back, map the problem carefully, and work through the most promising alternative avenues to find a way forward.</p>
+          </div>
+          <div class="service-includes reveal">
+            <h4>My approach includes:</h4>
+            <ul>
+              <li>Reconstructing entire family networks to identify one individual</li>
+              <li>Analysing migration patterns</li>
+              <li>Identifying naming traditions and kinship structures</li>
+              <li>Evaluating conflicting or incomplete records</li>
+              <li>Developing and testing multiple research hypotheses</li>
+            </ul>
+          </div>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Enquire About This Service</a>
+        </div>
+      </article>
+
+      <div class="service-divider"></div>
+
+      <!-- 05 INTERNATIONAL -->
+      <article class="service-detail-item" id="international">
+        <div class="service-detail-number">05</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h2>International &amp; Multi-Regional Research</h2>
+            <div class="service-detail-line"></div>
+          </div>
+          <p class="service-intro reveal">I have conducted genealogical research across multiple regions, each with its own archival systems, languages, and historical complexities.</p>
+          <div class="service-detail-body reveal">
+            <p>International research requires an understanding of how different record-keeping systems developed, what survives, and where it is held. My experience spans several continents, and I am comfortable navigating the particular challenges each region presents.</p>
+          </div>
+          <div class="service-includes reveal">
+            <h4>Regions covered include, but are not limited to:</h4>
+            <ul>
+              <li>North America (including Mexico)</li>
+              <li>Puerto Rico and parts of the Caribbean</li>
+              <li>Western Europe</li>
+              <li>Select regions of Eastern Europe (depending on record survival)</li>
+              <li>Australia</li>
+              <li>New Zealand</li>
+            </ul>
+          </div>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Enquire About This Service</a>
+        </div>
+      </article>
+
+      <div class="service-divider"></div>
+
+      <!-- 06 NARRATIVE -->
+      <article class="service-detail-item reverse" id="narrative">
+        <div class="service-detail-number">06</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h2>Historical Context &amp; Narrative Reporting</h2>
+            <div class="service-detail-line"></div>
+          </div>
+          <p class="service-intro reveal">Genealogy is about people, not just data. My reports place individuals within their historical world so that the findings come alive.</p>
+          <div class="service-detail-body reveal">
+            <p>Wherever possible, I contextualise research findings with historical background, helping you to understand not just who your ancestors were, but the world they inhabited and the circumstances that shaped their lives and decisions.</p>
+          </div>
+          <div class="service-includes reveal">
+            <h4>Reports may include:</h4>
+            <ul>
+              <li>Social and economic background</li>
+              <li>Occupational research</li>
+              <li>Geographic and community context</li>
+              <li>Historical events influencing family movement</li>
+              <li>Clearly written research summaries with full citations</li>
+            </ul>
+          </div>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Enquire About This Service</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- RESEARCH APPROACH -->
+  <section class="approach">
+    <div class="container">
+      <div class="approach-inner">
+        <div class="approach-text">
+          <p class="section-eyebrow reveal">How I work</p>
+          <h2 class="section-title reveal">My Research<br><em>Approach</em></h2>
+          <p class="body-text reveal">I prioritise evidence over assumption in every case. My research is guided by a structured plan, supported by transparent analysis, and fully documented with proper source citations.</p>
+          <p class="body-text reveal">I handle sensitive discoveries with care and provide realistic, honest evaluations of what the records can — and cannot — prove. I am honest about the limits of genealogy and how those limitations may influence the outcome of your research.</p>
+          <a href="index.html#enquire" class="btn btn-primary reveal">Get in Touch</a>
+        </div>
+        <div class="approach-pillars reveal">
+          <div class="approach-pillar">
+            <span class="pillar-icon">&#128269;</span>
+            <div>
+              <h4>Evidence-first</h4>
+              <p>Every conclusion is grounded in verifiable records, not assumption.</p>
+            </div>
+          </div>
+          <div class="approach-pillar">
+            <span class="pillar-icon">&#128196;</span>
+            <div>
+              <h4>Fully documented</h4>
+              <p>All findings include proper source citations so you always know where information comes from.</p>
+            </div>
+          </div>
+          <div class="approach-pillar">
+            <span class="pillar-icon">&#128172;</span>
+            <div>
+              <h4>Honest &amp; transparent</h4>
+              <p>I give realistic assessments of what research can achieve, including its limits.</p>
+            </div>
+          </div>
+          <div class="approach-pillar">
+            <span class="pillar-icon">&#128274;</span>
+            <div>
+              <h4>Handled with care</h4>
+              <p>Sensitive discoveries are communicated thoughtfully and with discretion.</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-strip-inner reveal">
+        <h2>Ready to start your research journey?</h2>
+        <p>Every family mystery begins with a single question. Let me help you find the answers.</p>
+        <a href="index.html#enquire" class="btn btn-primary btn-large">Make an Enquiry</a>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-200 py-8">
-    <div class="max-w-6xl mx-auto px-6 text-sm text-slate-600 flex flex-col md:flex-row justify-between gap-4">
-      <div>&copy; <span id="year"></span> Solving Your Mysteries</div>
-      <div class="flex gap-4">
-        <a href="#" class="hover:text-slate-800">Privacy</a>
-        <a href="#" class="hover:text-slate-800">Terms</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <span class="nav-logo-icon">&#9753;</span>
+            Solving Your Mysteries
+          </a>
+          <p>Bespoke genealogy research,<br>carried out with care and dedication.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#enquire">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#adoption">Adoption &amp; Unknown Parentage</a></li>
+            <li><a href="#genetic">Genetic Genealogy</a></li>
+            <li><a href="#documents">Document-Based Research</a></li>
+            <li><a href="#brickwall">Brick Wall &amp; Complex Cases</a></li>
+            <li><a href="#international">International Research</a></li>
+            <li><a href="#narrative">Historical Context &amp; Reporting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; 2025 Solving Your Mysteries. All rights reserved.</p>
+        <p class="footer-tagline"><em>"The past is never dead. It's not even past."</em></p>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileNav = document.getElementById('mobileNav');
-    mobileToggle?.addEventListener('click', () => {
-      mobileNav.classList.toggle('hidden');
-    });
-  </script>
-
+  <script src="main.js"></script>
 </body>
 </html>

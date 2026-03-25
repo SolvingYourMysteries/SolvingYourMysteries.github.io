@@ -1,293 +1,244 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Solving your Mysteries — Genealogy & DNA Family Trees</title>
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    html,body { font-family: "Inter", system-ui, sans-serif; }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(12px);
-      animation: fadeIn 0.7s ease forwards;
-    }
-    .delay-1 { animation-delay: .15s }
-    .delay-2 { animation-delay: .3s }
-    .delay-3 { animation-delay: .45s }
-
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .glass {
-      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.55));
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.45);
-    }
-
-    .portrait {
-      background: linear-gradient(135deg, #DCFCE7, #E0F2FE);
-    }
-
-    .dna-divider {
-      animation: floaty 6s ease-in-out infinite;
-    }
-
-    @keyframes floaty {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-      100% { transform: translateY(0); }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Solving Your Mysteries</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="bg-gradient-to-b from-white via-emerald-50 to-emerald-100 text-slate-800">
-
-  <!-- HEADER -->
-  <header class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
-    <a href="index.html" class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-full bg-emerald-400/20 flex items-center justify-center">
-        <svg class="w9 h-9 dna" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-          <circle cx="18" cy="18" r="16" fill="url(#g)" opacity="0.12"/>
-          <path fill="#77B255" d="M3.019 26.246l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFD983" d="M6.362 29.587l3.431 3.432l-.923.923l-3.43-3.432z"></path><path fill="#FFAC33" d="M6.273 24.237l3.432 3.432l-.923.923L5.35 25.16z"></path><path fill="#EA596E" d="M8.998 26.962l3.432 3.432l-.923.923l-3.431-3.432zm3.909-9.359l3.431 3.432l-.923.923l-3.431-3.432z"></path><path fill="#FFAC33" d="M15.631 20.329l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#77B255" d="M14.97 14.377l3.432 3.432l-.922.923l-3.432-3.432z"></path><path fill="#FFD983" d="M18.277 17.683l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFAC33" d="M17.616 11.731l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#EA596E" d="M20.923 15.038l3.432 3.431l-.923.923l-3.431-3.432zM24.387 4.96l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFAC33" d="M27.694 8.267l3.432 3.431l-.923.923l-3.432-3.432z"></path><path fill="#77B255" d="M27.013 2.252l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFD983" d="M30.36 5.6l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#9266CC" d="M24.922.812c-2.52 2.52-2.601 6.145-2.396 9.806c.501.028 1.002.061 1.502.094c.39.026.775.051 1.159.074c-.198-3.286-.199-6.299 1.606-8.104c.727-.703.955-1.653.447-2.166c-.535-.54-1.542-.497-2.318.296z"></path><path fill="#3B88C3" d="M13.146 25.65l-.153-2.66c-.026-.445-.058-.899-.074-1.332c-.296-.296-2.466-.349-2.653-.162c.013.44.047.884.071 1.327c.028.502.126 2.275.149 2.66c.054.91.096 1.806.086 2.656c.259.259 2.371.437 2.645.162a36.931 36.931 0 0 0-.071-2.651z"></path><path fill="#55ACEE" d="M13.22 28.3l-2.649-.162c-.026 2.209-.384 4.145-1.687 5.448a1.322 1.322 0 1 0 1.87 1.871c2.423-2.422 2.467-7.174 2.466-7.157z"></path><path fill="#9266CC" d="M25.354 13.447c-.501-.028-1.003-.061-1.503-.094c-.389-.026-.775-.051-1.158-.074c.198 3.285.199 6.299-1.607 8.104c-1.804 1.804-4.813 1.805-8.094 1.607c-.386-.023-2.159-.14-2.656-.168c-3.667-.206-7.297-.126-9.82 2.397a1.322 1.322 0 0 0 1.871 1.87c1.805-1.804 4.815-1.806 8.098-1.608c.385.023 2.161.14 2.66.168c3.662.205 7.289.125 9.811-2.396c2.521-2.52 2.603-6.145 2.398-9.806z"></path><path fill="#744EAA" d="M25.354 13.447c-.028-.501-.145-2.277-.168-2.66a51.95 51.95 0 0 1-.064-1.332c-.336-.021-2.1-.133-2.653-.163c.013.44.032.883.056 1.326c.028.501.145 2.277.168 2.661c.055.914.091 1.804.081 2.656c.333.021 2.094.132 2.645.162a36.316 36.316 0 0 0-.065-2.65z"></path><path fill="#55ACEE" d="M35.581 8.827c-.42-.436-1.385-.601-2.291.353c-1.805 1.805-4.817 1.806-8.104 1.607c-.384-.023-2.16-.141-2.661-.169c-3.66-.205-7.286-.123-9.806 2.397c-2.215 2.215-2.545 5.284-2.453 8.48c.553.03 2.319.142 2.653.162c-.098-2.755.113-5.214 1.671-6.772c1.805-1.805 4.818-1.805 8.104-1.607c.383.023 2.16.14 2.661.168c3.661.205 7.286.124 9.806-2.396c.886-.869.84-1.787.42-2.223z"></path>
-        </svg>
-      </div>
-      <span class="font-semibold">Solving Your Mysteries</span>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-icon"><img src="img/dna.svg" height="25px"/></span>
+      Solving Your Mysteries
     </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="index.html" class="hover:text-slate-900">Home</a>
-      <a href="about.html" class="font-medium text-emerald-600">About</a>
-      <a href="services.html" class="font-medium text-emerald-600">Services</a>
-      <a href="index.html#contact" class="px-4 py-2 rounded-lg bg-emerald-500 text-white hover:scale-105 transition">Get started</a>
-    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="index.html#enquire" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </nav>
 
-        <!-- mobile menu toggle -->
-        <div class="md:hidden">
-          <button id="mobileToggle" aria-label="Toggle menu" class="p-2 rounded-lg bg-white/60 glass">
-            <svg class="w-6 h-6 text-slate-700" viewBox="0 0 36 36" fill="none">
-              <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-              <circle cx="18" cy="18" r="16" fill="url(#g)" opacity="0.12"/>
-              <path fill="#77B255" d="M3.019 26.246l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFD983" d="M6.362 29.587l3.431 3.432l-.923.923l-3.43-3.432z"></path><path fill="#FFAC33" d="M6.273 24.237l3.432 3.432l-.923.923L5.35 25.16z"></path><path fill="#EA596E" d="M8.998 26.962l3.432 3.432l-.923.923l-3.431-3.432zm3.909-9.359l3.431 3.432l-.923.923l-3.431-3.432z"></path><path fill="#FFAC33" d="M15.631 20.329l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#77B255" d="M14.97 14.377l3.432 3.432l-.922.923l-3.432-3.432z"></path><path fill="#FFD983" d="M18.277 17.683l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFAC33" d="M17.616 11.731l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#EA596E" d="M20.923 15.038l3.432 3.431l-.923.923l-3.431-3.432zM24.387 4.96l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFAC33" d="M27.694 8.267l3.432 3.431l-.923.923l-3.432-3.432z"></path><path fill="#77B255" d="M27.013 2.252l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFD983" d="M30.36 5.6l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#9266CC" d="M24.922.812c-2.52 2.52-2.601 6.145-2.396 9.806c.501.028 1.002.061 1.502.094c.39.026.775.051 1.159.074c-.198-3.286-.199-6.299 1.606-8.104c.727-.703.955-1.653.447-2.166c-.535-.54-1.542-.497-2.318.296z"></path><path fill="#3B88C3" d="M13.146 25.65l-.153-2.66c-.026-.445-.058-.899-.074-1.332c-.296-.296-2.466-.349-2.653-.162c.013.44.047.884.071 1.327c.028.502.126 2.275.149 2.66c.054.91.096 1.806.086 2.656c.259.259 2.371.437 2.645.162a36.931 36.931 0 0 0-.071-2.651z"></path><path fill="#55ACEE" d="M13.22 28.3l-2.649-.162c-.026 2.209-.384 4.145-1.687 5.448a1.322 1.322 0 1 0 1.87 1.871c2.423-2.422 2.467-7.174 2.466-7.157z"></path><path fill="#9266CC" d="M25.354 13.447c-.501-.028-1.003-.061-1.503-.094c-.389-.026-.775-.051-1.158-.074c.198 3.285.199 6.299-1.607 8.104c-1.804 1.804-4.813 1.805-8.094 1.607c-.386-.023-2.159-.14-2.656-.168c-3.667-.206-7.297-.126-9.82 2.397a1.322 1.322 0 0 0 1.871 1.87c1.805-1.804 4.815-1.806 8.098-1.608c.385.023 2.161.14 2.66.168c3.662.205 7.289.125 9.811-2.396c2.521-2.52 2.603-6.145 2.398-9.806z"></path><path fill="#744EAA" d="M25.354 13.447c-.028-.501-.145-2.277-.168-2.66a51.95 51.95 0 0 1-.064-1.332c-.336-.021-2.1-.133-2.653-.163c.013.44.032.883.056 1.326c.028.501.145 2.277.168 2.661c.055.914.091 1.804.081 2.656c.333.021 2.094.132 2.645.162a36.316 36.316 0 0 0-.065-2.65z"></path><path fill="#55ACEE" d="M35.581 8.827c-.42-.436-1.385-.601-2.291.353c-1.805 1.805-4.817 1.806-8.104 1.607c-.384-.023-2.16-.141-2.661-.169c-3.66-.205-7.286-.123-9.806 2.397c-2.215 2.215-2.545 5.284-2.453 8.48c.553.03 2.319.142 2.653.162c-.098-2.755.113-5.214 1.671-6.772c1.805-1.805 4.818-1.805 8.104-1.607c.383.023 2.16.14 2.661.168c3.661.205 7.286.124 9.806-2.396c.886-.869.84-1.787.42-2.223z"></path>
-            </svg>
-          </button>
-        </div>
-      </header>
-    
-      <!-- mobile nav panel -->
-      <div id="mobileNav" class="hidden px-6 pb-6">
-        <div class="flex flex-col gap-3 max-w-3xl mx-auto">
-          <a href="index.html" class="py-2 px-4 rounded-lg hover:bg-white/40">Home</a>
-          <a href="about.html" class="py-2 px-4 rounded-lg hover:bg-white/40">About</a>
-          <a href="services.html" class="py-2 px-4 rounded-lg hover:bg-white/40">Services</a>
-          <a href="index.html#contact" class="py-2 px-4 rounded-lg bg-emerald-400 text-white text-center rounded">Get started</a>
-        </div>
-      </div>
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero-about">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow reveal">The researcher</p>
+      <h1 class="page-hero-title reveal">About<br><em>Solving Your Mysteries</em></h1>
+    </div>
+    <div class="page-hero-ornament">&#9753;</div>
+  </section>
 
-  <!-- MAIN -->
-  <main class="max-w-6xl mx-auto px-6">
-
-    <!-- INTRO -->
-    <section class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-      <div class="lg:col-span-2 fade-in delay-1">
-        <h1 class="text-4xl font-extrabold">About Brittany</h1>
-        <p class="mt-4 text-lg text-slate-600">
-          Hi, I’m Brittany, the researcher and founder behind Solving Your Mysteries. My journey into genealogy didn’t begin with this business, or even the idea of it, but with a book.
-        </p>
-        <p class="mt-4 text-slate-600">
-          When I was eleven, I found a family history book hidden in the back of a dusty and dark closet. It had been published in 1997 by a distant cousin on my mom’s side of the family. I was instantly engrossed and amazed by this object. 
-        </p>
+  <!-- ABOUT MAIN -->
+  <section class="about-main">
+    <div class="container">
+      <div class="about-main-inner">
+        <aside class="about-image-rail">
+          <div class="rail-image reveal">
+            <div class="image-frame">
+              <img src="img/about.jpeg" alt="Brittany researching in an archive" />
+            </div>
+            <p class="rail-caption">Brittany Warren — Independent Genealogy Researcher</p>
+          </div>
+          <div class="rail-image reveal">
+            <div class="image-frame">
+              <img src="img/services_4.jpeg" alt="Old family records" />
+            </div>
+            <p class="rail-caption"></p>
+          </div>
+          <div class="rail-image reveal">
+            <div class="image-frame">
+              <img src="img/services_5.jpeg" alt="DNA chart work" />
+            </div>
+            <!-- <p class="rail-caption">A caption for this image</p> -->
+          </div>
+          <div class="rail-image reveal">
+            <div class="image-frame">
+              <img src="img/services_3.jpeg" alt="Courthouse archive visit" />
+            </div>
+            <!-- <p class="rail-caption">A caption for this image</p> -->
+          </div>
+        </aside>
 
         
-        <p class="mt-4 text-slate-600">
-          I would sit on the living room floor for hours on end, reading and rereading, memorizing the names and the dates, finding all the locations on a map. I would imagine and build family lines in my head long before I even understood what genealogy was, or that you could research it. 
-        </p>
-    
-        <p class="mt-4" >
-          But even then, I didn’t just want the information in the book. I wanted <em>more</em>.
-        </p>
-    
-        <p class="mt-4" >
-          I wanted to fill in the gaps that I saw, I wanted to trace back the family lines even further. 
-        </p>
-    
-        <p class="mt-4" >
-          What did these people look like? What were their occupations? Where did they come from?
-        </p>
-    
-        <p class="mt-4" >
-          When I was a teenager, I remember my mom and her sister and my grandmother and I would drive four hours north of where we lived just so I could sit in a courthouse archive for hours and pour over wills and leases, newspapers and more. 
-        </p>
-    
-        <p class="mt-4" >
-          I learned to interpret handwriting, how to notice patterns in addresses and occupations, and I slowly began to fill in some of the gaps I’d had questions about. 
-        </p>
-    
-        <p class="mt-4" >
-          I was so lucky that through word-of-mouth of my research, I got in contact with the woman who had written the original book! 
-        </p>
-    
-        <p class="mt-4" >
-          I met her. She invited my family into her house to discuss our long dead ancestors. I remember being terrified, but so determined to ask her all the questions I had been holding on to. 
-        </p>
-    
-        <p class="mt-4" >
-          Nearly thirty years later, I am in the process of rewriting that book.
-        </p>
-    
-        <p class="mt-4" >
-          What was once a compiled history spanning two hundred years is now being expanded, corrected, and strengthened with historical context and new discoveries. I hope to finish it soon and send her a copy - a continuation of the work she began.
-        </p>
-    
-        <p class="mt-4" >
-          Work like this demands patience, restraint, and the willingness to build a case slowly, rather than chase a theory because it's convenient. 
-        </p>
-    
-        <p class="mt-4" >
-          Those principles were not shaped only in archives and courthouses, but also by my grandmother’s story.
-        </p>
-    
-        <p class="mt-4" >
-          My grandmother was adopted during World War II. She knew nothing about her biological parents, and she didn’t want to. 
-        </p>
-        <p class="mt-4" >
-          I remember asking her once if she ever wanted to know more about her biological family. She said, “I give you permission that when I die, you can look into it.”
-        </p>
-        <p class="mt-4" >
-          And so I said, “Okay.”
-        </p>
-        <p class="mt-4" >
-          I continued researching every other line of my family, including her adopted parents. I built our tree using the original, clunky genealogy websites that no longer exist. 
-        </p>
-        <p class="mt-4" >
-          And then DNA testing entered the market. I knew I <em>needed</em> to do this.
-        </p>
-        <p class="mt-4" >
-          My grandmother offered to buy it for me, and then casually, quietly, asked me to include a kit for herself. I didn’t question this or make a big deal out of it; I didn’t want her to back out. 
-        </p>
-        <p class="mt-4" >
-          Her only goal was to know her ethnicity.
-        </p>
-        <p class="mt-4" >
-          Little did I know that this one small decision would lay the foundation for what would come. 
-        </p>
-        <p class="mt-4" >
-          For months, I studied her DNA matches in secret. I never told her what I was doing. 
-        </p>
-        <p class="mt-4" >
-          I taught myself how to cluster relatives, analyze shared centimorgans, and map overlapping surnames. I reconstructed family networks from just fragments. 
-        </p>
-        <p class="mt-4" >
-          I learned how to build family trees with barely any information. I learned what a fourth cousin twice removed was. 
-        </p>
-        <p class="mt-4" >
-          One evening, during my senior year of high school, I had had enough of the guesswork and constant frustration of hitting dead-ends and brickwalls. I spent hours at the dining room table, taping together dozens of pieces of graph paper to map out her DNA matches using colored pens, markers, and highlighters. 
-        </p>
-        <p class="mt-4" >
-          Very quickly the table disappeared beneath my work. That was the night I had identified one of her biological parents. 
-        </p>
-        <p class="mt-4" >
-          It would take another year for my theory to be proven, when her half-sister just so happened to take a DNA test. We spoke over the phone, and now, years later, we are still in contact. 
-        </p>
-        <p class="mt-4" >
-          Neither one of them ever knew about the other, and from there, we found family we never knew existed. 
-        </p>
-        <p class="mt-4" >
-          Those two experiences have shaped everything about what I know and how I approach genealogy today. I understand the emotional complexity of this work, and how to handle sensitive discoveries. 
-        </p>
-        <p class="mt-4" >
-          Genealogy is detective work, but it also needs to remain ethical. 
-        </p>
-        <p class="mt-4" >
-          I don’t try to guess the information. I don’t copy unsourced online trees. And I don’t force records to fit a theory.
-        </p>
-        <p class="mt-4" >
-          I build structured research plans, test hypotheses, and evaluate conflicting evidence. All my research is clearly documented and proven, and I acknowledge uncertainty when it exists. 
-        </p>
-        <p class="mt-4" >
-          Solving Your Mysteries was built from years of lived research: courthouse archives to DNA charts to roadtrips.
-        </p>
-        <p class="mt-4" >
-          Every family has questions and missing information. 
-        </p>
-        <p class="mt-4" >
-          And I want to help you find those answers. 
-        </p>
+
+        <div class="about-bio">
+          <h2 class="section-title reveal">A life spent<br><em>searching for stories</em></h2>
+
+          <p class="body-text reveal large-text">Hi, I’m Brittany, the researcher and founder behind Solving Your Mysteries. My journey into genealogy didn’t begin with this business, or even the idea of it, but with a book.</p>
+
+          <p class="body-text reveal">When I was eleven, I found a family history book hidden in the back of a dusty and dark closet. It had been published in 1997 by a distant cousin on my mom’s side of the family. I was instantly engrossed and amazed by this object. I would sit on the living room floor for hours on end, reading and rereading, memorizing the names and the dates, finding all the locations on a map. I would imagine and build family lines in my head long before I even understood what genealogy was, or that you could research it. But even then, I didn’t just want the information in the book. I wanted <em>more</em>. I wanted to fill in the gaps that I saw, I wanted to trace back the family lines even further. What did these people look like? What were their occupations? Where did they come from?</p>
+          <p class="body-text reveal">When I was a teenager, I remember my mom and her sister and my grandmother and I would drive four hours north of where we lived just so I could sit in a courthouse archive for hours and pour over wills and leases, newspapers and more. I learned to interpret handwriting, how to notice patterns in addresses and occupations, and I slowly began to fill in some of the gaps I’d had questions about. I was so lucky that through word-of-mouth of my research, I got in contact with the woman who had written the original book! I met her. She invited my family into her house to discuss our long dead ancestors. I remember being terrified, but so determined to ask her all the questions I had been holding on to. </p>
+          <p class="body-text reveal">Nearly thirty years later, I am in the process of rewriting that book. What was once a compiled history spanning two hundred years is now being expanded, corrected, and strengthened with historical context and new discoveries. I hope to finish it soon and send her a copy - a continuation of the work she began. Work like this demands patience, restraint, and the willingness to build a case slowly, rather than chase a theory because it's convenient. </p>
+          <div class="about-pull-quote reveal">
+            <p>"I didn't just want the information in the book. I wanted <em>more.</em>"</p>
+          </div>
+
+          <p class="body-text reveal">Those principles were not shaped only in archives and courthouses, but also by my grandmother’s story.</p>
+          <p class="body-text reveal">My grandmother was adopted during World War II. She knew nothing about her biological parents, and she didn’t want to. I remember asking her once if she ever wanted to know more about her biological family. She said, “I give you permission that when I die, you can look into it”. And so I said, “Okay”. I continued researching every other line of my family, including her adopted parents. I built our tree using the original, clunky genealogy websites that no longer exist. </p>
+          
+          <p class="body-text reveal">And then DNA testing entered the market. I knew I <em>needed</em> to do this. My grandmother offered to buy it for me, and then casually, quietly, asked me to include a kit for herself. I didn’t question this or make a big deal out of it; I didn’t want her to back out. Her only goal was to know her ethnicity. Little did I know that this one small decision would lay the foundation for what would come.  </p>
+          <p class="body-text reveal">For months, I studied her DNA matches in secret. I never told her what I was doing. I taught myself how to cluster relatives, analyze shared centimorgans, and map overlapping surnames. I reconstructed family networks from just fragments. I learned how to build family trees with barely any information. I learned what a fourth cousin twice removed was. One evening, during my senior year of high school, I had had enough of the guesswork and constant frustration of hitting dead-ends and brickwalls. I spent hours at the dining room table, taping together dozens of pieces of graph paper to map out her DNA matches using colored pens, markers, and highlighters. Very quickly the table disappeared beneath my work. That was the night I identified one of her biological parents. </p>
+
+          <div class="about-milestone reveal">
+            <div class="milestone-icon">&#9998;</div>
+            <p>I taught myself how to cluster relatives, analyze shared centimorgans, and map overlapping surnames. I reconstructed family networks from just fragments.</p>
+          </div>
+
+          <p class="body-text reveal">It would take another year for my theory to be proven, when her half-sister just so happened to take a DNA test. We spoke over the phone, and now, years later, we are still in contact. Neither one of them ever knew about the other, and from there, we found family we never knew existed. </p>
+          <p class="body-text reveal">Those two experiences have shaped everything about what I know and how I approach genealogy today. I understand the emotional complexity of this work, and how to handle sensitive discoveries. Genealogy is detective work, but it also needs to remain ethical. I don’t try to guess the information. I don’t copy unsourced online trees. And I don’t force records to fit a theory. I build structured research plans, test hypotheses, and evaluate conflicting evidence. All my research is clearly documented and proven, and I acknowledge uncertainty when it exists. </p>
+
+          <div class="about-quote reveal">
+            <blockquote>"Solving Your Mysteries was built from years of lived research: courthouse archives to DNA charts to roadtrips. Every family has questions and missing information. And I want to help you find those answers."</blockquote>
+          </div>
+        </div>
       </div>
-
-      <!-- portrait -->
-
-      <div class="hidden lg:flex flex-col gap-16 items-end sticky top-24 h-fit">
-
-        <div class="portrait w-48 h-48 rounded-2xl shadow-lg overflow-hidden">
-          <img src="IMG_5625.JPEG" class="w-full h-full object-cover" />
-        </div>
-      
-        <div class="portrait w-48 h-48 rounded-2xl shadow-lg overflow-hidden">
-          <img src="services_1.jpeg" class="w-full h-full object-cover" />
-        </div>
-      
-        <div class="portrait w-48 h-48 rounded-2xl shadow-lg overflow-hidden">
-          <img src="services_5.jpeg" class="w-full h-full object-cover" />
-        </div>
-      
-      </div>
-
-    </section>
-
-    <!-- DIVIDER -->
-    <div class="flex justify-center my-10 fade-in delay-3">
-      <svg class="w-24 h-24 dna" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#34D399"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-        <circle cx="18" cy="18" r="16" fill="url(#g)" opacity="0.12"/>
-        <path fill="#77B255" d="M3.019 26.246l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFD983" d="M6.362 29.587l3.431 3.432l-.923.923l-3.43-3.432z"></path><path fill="#FFAC33" d="M6.273 24.237l3.432 3.432l-.923.923L5.35 25.16z"></path><path fill="#EA596E" d="M8.998 26.962l3.432 3.432l-.923.923l-3.431-3.432zm3.909-9.359l3.431 3.432l-.923.923l-3.431-3.432z"></path><path fill="#FFAC33" d="M15.631 20.329l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#77B255" d="M14.97 14.377l3.432 3.432l-.922.923l-3.432-3.432z"></path><path fill="#FFD983" d="M18.277 17.683l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFAC33" d="M17.616 11.731l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#EA596E" d="M20.923 15.038l3.432 3.431l-.923.923l-3.431-3.432zM24.387 4.96l3.432 3.432l-.923.922l-3.432-3.431z"></path><path fill="#FFAC33" d="M27.694 8.267l3.432 3.431l-.923.923l-3.432-3.432z"></path><path fill="#77B255" d="M27.013 2.252l3.432 3.432l-.923.923l-3.432-3.432z"></path><path fill="#FFD983" d="M30.36 5.6l3.432 3.431l-.923.923l-3.432-3.431z"></path><path fill="#9266CC" d="M24.922.812c-2.52 2.52-2.601 6.145-2.396 9.806c.501.028 1.002.061 1.502.094c.39.026.775.051 1.159.074c-.198-3.286-.199-6.299 1.606-8.104c.727-.703.955-1.653.447-2.166c-.535-.54-1.542-.497-2.318.296z"></path><path fill="#3B88C3" d="M13.146 25.65l-.153-2.66c-.026-.445-.058-.899-.074-1.332c-.296-.296-2.466-.349-2.653-.162c.013.44.047.884.071 1.327c.028.502.126 2.275.149 2.66c.054.91.096 1.806.086 2.656c.259.259 2.371.437 2.645.162a36.931 36.931 0 0 0-.071-2.651z"></path><path fill="#55ACEE" d="M13.22 28.3l-2.649-.162c-.026 2.209-.384 4.145-1.687 5.448a1.322 1.322 0 1 0 1.87 1.871c2.423-2.422 2.467-7.174 2.466-7.157z"></path><path fill="#9266CC" d="M25.354 13.447c-.501-.028-1.003-.061-1.503-.094c-.389-.026-.775-.051-1.158-.074c.198 3.285.199 6.299-1.607 8.104c-1.804 1.804-4.813 1.805-8.094 1.607c-.386-.023-2.159-.14-2.656-.168c-3.667-.206-7.297-.126-9.82 2.397a1.322 1.322 0 0 0 1.871 1.87c1.805-1.804 4.815-1.806 8.098-1.608c.385.023 2.161.14 2.66.168c3.662.205 7.289.125 9.811-2.396c2.521-2.52 2.603-6.145 2.398-9.806z"></path><path fill="#744EAA" d="M25.354 13.447c-.028-.501-.145-2.277-.168-2.66a51.95 51.95 0 0 1-.064-1.332c-.336-.021-2.1-.133-2.653-.163c.013.44.032.883.056 1.326c.028.501.145 2.277.168 2.661c.055.914.091 1.804.081 2.656c.333.021 2.094.132 2.645.162a36.316 36.316 0 0 0-.065-2.65z"></path><path fill="#55ACEE" d="M35.581 8.827c-.42-.436-1.385-.601-2.291.353c-1.805 1.805-4.817 1.806-8.104 1.607c-.384-.023-2.16-.141-2.661-.169c-3.66-.205-7.286-.123-9.806 2.397c-2.215 2.215-2.545 5.284-2.453 8.48c.553.03 2.319.142 2.653.162c-.098-2.755.113-5.214 1.671-6.772c1.805-1.805 4.818-1.805 8.104-1.607c.383.023 2.16.14 2.661.168c3.661.205 7.286.124 9.806-2.396c.886-.869.84-1.787.42-2.223z"></path>
-      </svg>
     </div>
+  </section>
 
-    <!-- CTA -->
-    <section class="mt-14 mb-16 fade-in">
-      <div class="max-w-3xl mx-auto text-center p-8 glass rounded-2xl">
-        <h3 class="text-xl font-semibold">Let’s explore your story together</h3>
-        <p class="mt-2 text-slate-600">
-          If you’re curious about your roots or facing a stubborn brick wall,
-          I’d love to help.
-        </p>
-        <a href="index.html#contact" class="inline-block mt-6 px-6 py-3 rounded-full bg-emerald-500 text-white font-medium hover:scale-105 transition">
-          Book a free consultation
-        </a>
+  <!-- VALUES -->
+  <section class="values">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow reveal">How I work</p>
+        <h2 class="section-title reveal">My approach<br>to <em>your research</em></h2>
       </div>
-    </section>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">&#128269;</div>
+          <h3>Thorough</h3>
+          <p>I don't stop at the first result. I check, cross-reference, and follow every lead until I'm confident in what I've found. Quality matters more than speed.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">&#128220;</div>
+          <h3>Evidenced</h3>
+          <p>Everything I present comes with a source. You'll always know where information came from and how reliable it is — no guesswork, no assumptions.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">&#128172;</div>
+          <h3>Communicative</h3>
+          <p>I keep you in the loop throughout the research. If something surprising turns up — positive or negative — you'll hear about it promptly.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">&#128274;</div>
+          <h3>Discreet</h3>
+          <p>Family histories sometimes uncover sensitive information. Everything you share with me and everything I discover is handled with complete confidentiality.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">&#127775;</div>
+          <h3>Passionate</h3>
+          <p>This isn't just a job. I'm genuinely excited by each new family puzzle, and that enthusiasm shows in the work I produce.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">&#129309;</div>
+          <h3>Personal</h3>
+          <p>You'll always be working directly with me — not a team, not an algorithm. Your project gets my full, individual attention from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <!-- CREDENTIALS -->
+  <section class="credentials">
+    <div class="container">
+      <div class="credentials-inner">
+        <div class="credentials-text">
+          <p class="section-eyebrow reveal">Experience & expertise</p>
+          <h2 class="section-title reveal">The knowledge<br><em>behind the research</em></h2>
+          <p class="body-text reveal">Add your professional credentials, memberships, training, and experience here. This is an important section for building trust with potential clients — genealogy clients want to know their researcher is skilled, knowledgeable, and professional.</p>
+          <p class="body-text reveal">Consider mentioning: how long you've been researching, any formal training or qualifications, professional body memberships, areas of specialist knowledge (e.g. Irish records, Scottish records, DNA analysis), and any notable projects or discoveries.</p>
+        </div>
+        <div class="credentials-items reveal">
+          <div class="credential-item">
+            <span class="credential-icon">&#9733;</span>
+            <div>
+              <h4>Professional Membership</h4>
+              <p>Add your professional body memberships here</p>
+            </div>
+          </div>
+          <div class="credential-item">
+            <span class="credential-icon">&#9733;</span>
+            <div>
+              <h4>Years of Experience</h4>
+              <p>Add how long you've been researching professionally</p>
+            </div>
+          </div>
+          <div class="credential-item">
+            <span class="credential-icon">&#9733;</span>
+            <div>
+              <h4>Specialist Areas</h4>
+              <p>List your areas of specialist expertise</p>
+            </div>
+          </div>
+          <div class="credential-item">
+            <span class="credential-icon">&#9733;</span>
+            <div>
+              <h4>Training & Qualifications</h4>
+              <p>Add any relevant courses, qualifications or training</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container">
+      <div class="cta-strip-inner reveal">
+        <h2>Shall we start unravelling your family's history?</h2>
+        <p>Get in touch and let's talk about what you're looking for.</p>
+        <a href="index.html#enquire" class="btn btn-primary btn-large">Make an Enquiry</a>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="border-t border-slate-200 py-8">
-    <div class="max-w-6xl mx-auto px-6 text-sm text-slate-600 flex flex-col md:flex-row justify-between gap-4">
-      <div>&copy; <span id="year"></span> Solving Your Mysteries</div>
-      <div class="flex gap-4">
-        <a href="#" class="hover:text-slate-800">Privacy</a>
-        <a href="#" class="hover:text-slate-800">Terms</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">
+            <span class="nav-logo-icon">&#9753;</span>
+            Solving Your Mysteries
+          </a>
+          <p>Bespoke genealogy research,<br>carried out with care and dedication.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#enquire">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#adoption">Adoption &amp; Unknown Parentage</a></li>
+            <li><a href="#genetic">Genetic Genealogy</a></li>
+            <li><a href="#documents">Document-Based Research</a></li>
+            <li><a href="#brickwall">Brick Wall &amp; Complex Cases</a></li>
+            <li><a href="#international">International Research</a></li>
+            <li><a href="#narrative">Historical Context &amp; Reporting</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; 2026 Solving Your Mysteries. All rights reserved.</p>
+        <p class="footer-tagline"><em>"The past is never dead. It's not even past."</em></p>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileNav = document.getElementById('mobileNav');
-    mobileToggle?.addEventListener('click', () => {
-      mobileNav.classList.toggle('hidden');
-    });
-  </script>
-
+  <script src="main.js"></script>
 </body>
 </html>
