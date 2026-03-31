@@ -292,7 +292,7 @@
   });
 
   // Submit
-  form.addEventListener('submit', function(e) {
+ form.addEventListener('submit', function(e) {
     e.preventDefault();
     if (!validatePage2()) return;
 
@@ -301,25 +301,56 @@
     submitBtn.disabled = true;
 
     const formAction = 'https://docs.google.com/forms/d/e/1FAIpQLSfVKPpZjl_0zv-Wk47fnKc8SmRguX_HL4AveEFc0cr7sef0iA/formResponse';
-    const data = new FormData(form);
 
-    // Handle "Other" text value for documents field
+    // Build params manually
+    const params = new URLSearchParams();
+
+    // Page 1
+    params.append('entry.227282099', document.getElementById('fullName').value.trim());
+    params.append('emailAddress',    document.getElementById('emailAddress').value.trim());
+
+    // Page 2 — text fields
+    params.append('entry.282346556', document.getElementById('mainMystery').value.trim());
+    params.append('entry.558749558', document.getElementById('timePeriod').value.trim());
+    params.append('entry.1524088975', document.getElementById('geoArea').value.trim());
+    params.append('entry.1848109068', document.getElementById('outcome').value.trim());
+    params.append('entry.1891890464', document.getElementById('deadline').value.trim());
+
+    // Prior research radio
+    const priorChecked = document.querySelector('input[name="entry.2020990205"]:checked');
+    if (priorChecked) params.append('entry.2020990205', priorChecked.value);
+
+    // Prior research detail
+    const priorDetailVal = document.getElementById('priorDetail').value.trim();
+    if (priorDetailVal) params.append('entry.604685180', priorDetailVal);
+
+    // Documents checkboxes — append one entry per checked box
+    document.querySelectorAll('input[name="entry.1323006018"]:checked').forEach(cb => {
+      params.append('entry.1323006018', cb.value);
+    });
+    // Other text if filled
     if (otherCheckbox.checked && otherText.value.trim()) {
-      data.set('entry.1323006018.other_option_response', otherText.value.trim());
+      params.append('entry.1323006018.other_option_response', otherText.value.trim());
     }
+
+    // DNA radio
+    const dnaChecked = document.querySelector('input[name="entry.88744541"]:checked');
+    if (dnaChecked) params.append('entry.88744541', dnaChecked.value);
+
+    // Confirm checkboxes — append one entry per checked box
+    document.querySelectorAll('.confirm-check:checked').forEach(cb => {
+      params.append('entry.147566616', cb.value);
+    });
 
     fetch(formAction, {
       method: 'POST',
-      body: data,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString(),
       mode: 'no-cors'
     }).then(() => {
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
+      showSuccess();
     }).catch(() => {
-      // no-cors fetch resolves even on error, so this rarely fires
-      // but show success anyway as the data is almost certainly sent
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
+      showSuccess();
     });
   });
 })();
