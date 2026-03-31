@@ -342,15 +342,21 @@
       params.append('entry.147566616', cb.value);
     });
 
+    console.log('mainMystery:', document.getElementById('mainMystery').value);
+    console.log('timePeriod:', document.getElementById('timePeriod').value);
+    console.log('params:', params.toString());
+
     fetch(formAction, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: params.toString(),
       mode: 'no-cors'
     }).then(() => {
-      showSuccess();
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
     }).catch(() => {
-      showSuccess();
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
     });
   });
 })();
