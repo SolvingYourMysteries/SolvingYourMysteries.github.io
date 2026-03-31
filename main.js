@@ -346,17 +346,39 @@
     console.log('timePeriod:', document.getElementById('timePeriod').value);
     console.log('params:', params.toString());
 
-    fetch(formAction, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: params.toString(),
-      mode: 'no-cors'
-    }).then(() => {
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
-    }).catch(() => {
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
+
+    // Create a hidden iframe to submit through
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden-form-target';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    // Create a temporary real form and submit it
+    const tempForm = document.createElement('form');
+    tempForm.method = 'POST';
+    tempForm.action = formAction;
+    tempForm.target = 'hidden-form-target';
+    tempForm.style.display = 'none';
+
+    // Add all params as hidden inputs
+    params.forEach((value, key) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = key;
+      input.value = value;
+      tempForm.appendChild(input);
     });
+
+    document.body.appendChild(tempForm);
+
+    iframe.onload = function() {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+      document.body.removeChild(tempForm);
+      document.body.removeChild(iframe);
+    };
+
+    tempForm.submit();
+
   });
 })();
