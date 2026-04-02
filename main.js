@@ -159,33 +159,10 @@
 
 /* ---- ENQUIRY FORM ----------------------------------------- */
 (function() {
-  const form         = document.getElementById('enquiryForm');
+  const form      = document.getElementById('enquiryForm');
   if (!form) return;
 
-  const page1        = document.getElementById('formPage1');
-  const page2        = document.getElementById('formPage2');
-  const nextBtn      = document.getElementById('nextBtn');
-  const backBtn      = document.getElementById('backBtn');
-  const step1        = document.getElementById('stepIndicator1');
-  const step2        = document.getElementById('stepIndicator2');
-  const successMsg   = document.getElementById('formSuccess');
-  const otherCheckbox = document.getElementById('otherCheckbox');
-  const otherText    = document.getElementById('otherText');
-  const priorRadios  = document.querySelectorAll('input[name="entry.2020990205"]');
-  const priorDetail  = document.getElementById('priorResearchDetail');
-
-  // Show/hide "other" text input
-  otherCheckbox.addEventListener('change', function() {
-    otherText.style.display = this.checked ? 'block' : 'none';
-    if (!this.checked) otherText.value = '';
-  });
-
-  // Show/hide prior research detail
-  priorRadios.forEach(radio => {
-    radio.addEventListener('change', function() {
-      priorDetail.style.display = this.value === 'Yes' ? 'block' : 'none';
-    });
-  });
+  const successMsg = document.getElementById('formSuccess');
 
   function showError(inputEl, errorEl) {
     if (inputEl) inputEl.classList.add('invalid');
@@ -197,13 +174,22 @@
     if (errorEl) errorEl.classList.remove('visible');
   }
 
-  function validatePage1() {
-    let valid = true;
-    const name  = document.getElementById('fullName');
-    const email = document.getElementById('emailAddress');
+  function showSuccess() {
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+  }
 
-    clearError(name,  document.getElementById('fullNameError'));
-    clearError(email, document.getElementById('emailError'));
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name    = document.getElementById('fullName');
+    const email   = document.getElementById('emailAddress');
+    const message = document.getElementById('message');
+    let valid = true;
+
+    clearError(name,    document.getElementById('fullNameError'));
+    clearError(email,   document.getElementById('emailError'));
+    clearError(message, document.getElementById('messageError'));
 
     if (!name.value.trim()) {
       showError(name, document.getElementById('fullNameError'));
@@ -214,87 +200,11 @@
       showError(email, document.getElementById('emailError'));
       valid = false;
     }
-    return valid;
-  }
-
-  function validatePage2() {
-    let valid = true;
-
-    // Required text fields
-    const textFields = [
-      { id: 'mainMystery',  errId: 'mainMysteryError' },
-      { id: 'timePeriod',   errId: 'timePeriodError' },
-      { id: 'outcome',      errId: 'outcomeError' },
-      { id: 'deadline',     errId: 'deadlineError' },
-    ];
-    textFields.forEach(({ id, errId }) => {
-      const el = document.getElementById(id);
-      clearError(el, document.getElementById(errId));
-      if (!el.value.trim()) {
-        showError(el, document.getElementById(errId));
-        valid = false;
-      }
-    });
-
-    // Prior research radio
-    const priorChecked = document.querySelector('input[name="entry.2020990205"]:checked');
-    clearError(null, document.getElementById('priorResearchError'));
-    if (!priorChecked) {
-      showError(null, document.getElementById('priorResearchError'));
+    if (!message.value.trim()) {
+      showError(message, document.getElementById('messageError'));
       valid = false;
     }
-
-    // Documents checkboxes — at least one
-    const docChecked = document.querySelectorAll('input[name="entry.1323006018"]:checked');
-    clearError(null, document.getElementById('documentsError'));
-    if (docChecked.length === 0) {
-      showError(null, document.getElementById('documentsError'));
-      valid = false;
-    }
-
-    // DNA radio
-    const dnaChecked = document.querySelector('input[name="entry.88744541"]:checked');
-    clearError(null, document.getElementById('dnaError'));
-    if (!dnaChecked) {
-      showError(null, document.getElementById('dnaError'));
-      valid = false;
-    }
-
-    // Confirm checkboxes — all three required
-    const confirmBoxes   = document.querySelectorAll('.confirm-check');
-    const confirmChecked = document.querySelectorAll('.confirm-check:checked');
-    clearError(null, document.getElementById('confirmError'));
-    if (confirmChecked.length < confirmBoxes.length) {
-      showError(null, document.getElementById('confirmError'));
-      valid = false;
-    }
-
-    return valid;
-  }
-
-  // Next button
-  nextBtn.addEventListener('click', function() {
-    if (!validatePage1()) return;
-    page1.classList.remove('active');
-    page2.classList.add('active');
-    step1.classList.remove('active');
-    step2.classList.add('active');
-    window.scrollTo({ top: document.getElementById('enquire').offsetTop - 90, behavior: 'smooth' });
-  });
-
-  // Back button
-  backBtn.addEventListener('click', function() {
-    page2.classList.remove('active');
-    page1.classList.add('active');
-    step2.classList.remove('active');
-    step1.classList.add('active');
-    window.scrollTo({ top: document.getElementById('enquire').offsetTop - 90, behavior: 'smooth' });
-  });
-
-  // Submit
- form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    if (!validatePage2()) return;
+    if (!valid) return;
 
     const submitBtn = document.getElementById('submitBtn');
     submitBtn.textContent = 'Sending…';
@@ -302,65 +212,22 @@
 
     const formAction = 'https://docs.google.com/forms/d/e/1FAIpQLSfVKPpZjl_0zv-Wk47fnKc8SmRguX_HL4AveEFc0cr7sef0iA/formResponse';
 
-    // Build params manually
     const params = new URLSearchParams();
+    params.append('entry.227282099', name.value.trim());
+    params.append('emailAddress',    email.value.trim());
+    params.append('entry.703233908', message.value.trim());
 
-    // Page 1
-    params.append('entry.227282099', document.getElementById('fullName').value.trim());
-    params.append('emailAddress',    document.getElementById('emailAddress').value.trim());
-
-    // Page 2 — text fields
-    params.append('entry.282346556', document.getElementById('mainMystery').value.trim());
-    params.append('entry.558749558', document.getElementById('timePeriod').value.trim());
-    params.append('entry.1524088975', document.getElementById('geoArea').value.trim());
-    params.append('entry.1848109068', document.getElementById('outcome').value.trim());
-    params.append('entry.1891890464', document.getElementById('deadline').value.trim());
-
-    // Prior research radio
-    const priorChecked = document.querySelector('input[name="entry.2020990205"]:checked');
-    if (priorChecked) params.append('entry.2020990205', priorChecked.value);
-
-    // Prior research detail
-    const priorDetailVal = document.getElementById('priorDetail').value.trim();
-    if (priorDetailVal) params.append('entry.604685180', priorDetailVal);
-
-    // Documents checkboxes — append one entry per checked box
-    document.querySelectorAll('input[name="entry.1323006018"]:checked').forEach(cb => {
-      params.append('entry.1323006018', cb.value);
-    });
-    // Other text if filled
-    if (otherCheckbox.checked && otherText.value.trim()) {
-      params.append('entry.1323006018.other_option_response', otherText.value.trim());
-    }
-
-    // DNA radio
-    const dnaChecked = document.querySelector('input[name="entry.88744541"]:checked');
-    if (dnaChecked) params.append('entry.88744541', dnaChecked.value);
-
-    // Confirm checkboxes — append one entry per checked box
-    document.querySelectorAll('.confirm-check:checked').forEach(cb => {
-      params.append('entry.147566616', cb.value);
-    });
-
-    console.log('mainMystery:', document.getElementById('mainMystery').value);
-    console.log('timePeriod:', document.getElementById('timePeriod').value);
-    console.log('params:', params.toString());
-
-
-    // Create a hidden iframe to submit through
     const iframe = document.createElement('iframe');
     iframe.name = 'hidden-form-target';
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
 
-    // Create a temporary real form and submit it
     const tempForm = document.createElement('form');
     tempForm.method = 'POST';
     tempForm.action = formAction;
     tempForm.target = 'hidden-form-target';
     tempForm.style.display = 'none';
 
-    // Add all params as hidden inputs
     params.forEach((value, key) => {
       const input = document.createElement('input');
       input.type = 'hidden';
@@ -372,13 +239,11 @@
     document.body.appendChild(tempForm);
 
     iframe.onload = function() {
-      form.style.display = 'none';
-      successMsg.style.display = 'block';
+      showSuccess();
       document.body.removeChild(tempForm);
       document.body.removeChild(iframe);
     };
 
     tempForm.submit();
-
   });
 })();
