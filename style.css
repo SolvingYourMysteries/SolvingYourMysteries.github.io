@@ -1775,3 +1775,174 @@ iframe { display: block; }
   color: #5a4a3a;
   max-width: 65ch;
 }
+
+/* ---- PRICING ---------------------------------------------- */
+.pricing {
+  padding: 8rem 0;
+  background: var(--cream);
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--border);
+  border: 1.5px solid var(--border);
+  margin-bottom: 2rem;
+}
+.pricing-card {
+  background: var(--cream);
+  padding: 2.75rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  transition: background 0.3s;
+}
+.pricing-card:hover { background: var(--parchment); }
+.pricing-card-featured {
+  background: var(--ink);
+}
+.pricing-card-featured:hover { background: var(--ink-soft); }
+.pricing-featured-label {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  background: var(--sepia);
+  color: var(--cream);
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+.pricing-card-featured .pricing-card-header { margin-top: 1.5rem; }
+.pricing-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.pricing-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.pricing-card-featured h3 { color: var(--cream); }
+.pricing-amount {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--sepia);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.pricing-card-featured .pricing-amount { color: var(--gold-light); }
+.pricing-card-body {
+  flex: 1;
+}
+.pricing-card-body p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.pricing-card-featured .pricing-card-body p { color: rgba(245,240,232,0.65); }
+.pricing-card-detail {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+.pricing-card-featured .pricing-card-detail { border-color: rgba(139,111,71,0.25); }
+.pricing-hours {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sepia);
+}
+.pricing-card-featured .pricing-hours { color: var(--sepia-light); }
+.pricing-btn {
+  align-self: flex-start;
+}
+.pricing-card-featured .pricing-btn {
+  background: var(--sepia);
+  border-color: var(--sepia);
+  color: var(--cream);
+}
+.pricing-card-featured .pricing-btn:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+/* Hourly rate bar */
+.pricing-hourly {
+  background: var(--parchment);
+  border: 1.5px solid var(--border);
+  margin-bottom: 2rem;
+}
+.pricing-hourly-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.25rem 2.5rem;
+  flex-wrap: wrap;
+}
+.pricing-hourly-text {
+  flex: 1;
+  min-width: 260px;
+}
+.pricing-hourly-text h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.pricing-hourly-text p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.pricing-hourly-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+.pricing-hourly-amount {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--sepia);
+  line-height: 1;
+}
+.pricing-hourly-unit {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sepia-light);
+}
+.pricing-note {
+  font-family: var(--font-ui);
+  font-size: 0.775rem;
+  color: var(--sepia);
+  text-align: center;
+  line-height: 1.7;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-hourly-inner { gap: 1.5rem; }
+}
