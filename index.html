@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Solving Your Mysteries | Genealogy Research</title>
+  <title>Genealogy Researcher UK | Family History & DNA Research | Solving Your Mysteries</title>
   <meta
     name="description"
-    content="Professional genealogy research to help uncover family history, solve ancestry questions, trace relatives, and explore historical records in the UK, US, and worldwide."
+    content="Professional genealogy research by Brittany Warren. Trace your family tree, solve DNA and unknown parentage cases, break through brick walls, and uncover family history in the UK, US and worldwide."
   />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#f8f5ef" />
@@ -49,10 +49,11 @@
         }
       },
       {
-        "@type": "Organization",
+        "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": "https://www.solvingyourmysteries.co.uk/#organization",
         "name": "Solving Your Mysteries",
         "url": "https://www.solvingyourmysteries.co.uk/",
+        "image": "https://www.solvingyourmysteries.co.uk/img/logo.png",
         "logo": {
           "@type": "ImageObject",
           "url": "https://www.solvingyourmysteries.co.uk/img/logo.png"
@@ -62,46 +63,66 @@
           "name": "Brittany Warren"
         },
         "email": "mailto:solvingyourmysteries@gmail.com",
+        "priceRange": "££",
+        "description": "Professional genealogy research helping clients investigate family history, ancestry, DNA matches, unknown parentage, and historical records.",
+        "areaServed": [
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Country", "name": "United States" },
+          { "@type": "Place", "name": "Worldwide" }
+        ],
         "sameAs": [
           "https://www.instagram.com/solvingyourmysteries/",
-          "https://www.facebook.com/people/Solving-Your-Mysteries/100086597230796/"
-        ],
-        "description": "Professional genealogy research helping clients investigate family history, ancestry, DNA matches, and historical records.",
-        "areaServed": [
-          {
-            "@type": "Country",
-            "name": "United Kingdom"
-          },
-          {
-            "@type": "Country",
-            "name": "United States"
-          },
-          {
-            "@type": "Place",
-            "name": "Worldwide"
-          }
+          "https://www.facebook.com/people/Solving-Your-Mysteries/100086597230796/",
+          "https://open.spotify.com/show/3g8fs9ZP1UnyiO2qd4SErr",
+          "https://solvingyourmysteries.etsy.com"
         ],
         "knowsAbout": [
           "Genealogy research",
           "Family history research",
           "Ancestry research",
           "DNA genealogy",
-          "Historical records research",
           "Unknown parentage research",
-          "Family tree research"
-        ],
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "contactType": "customer support",
-            "email": "solvingyourmysteries@gmail.com",
-            "url": "https://www.solvingyourmysteries.co.uk/"
-          }
+          "Adoption genealogy",
+          "Family tree research",
+          "Historical records research"
         ]
       }
     ]
   }
   </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Solving Your Mysteries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solving Your Mysteries is a research-based genealogy service that helps uncover answers about your family history using genealogical records, historical research, and, where applicable, DNA insights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you help with adoption or unknown parent cases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. These cases often involve a mix of DNA analysis and traditional research to identify and confirm biological connections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can get in touch through the contact form with a brief overview of your situation. From there, Brittany will explain what is possible, what the process may look like, and any next steps."
+      }
+    }
+  ]
+}
+</script>
 
   <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
@@ -123,7 +144,7 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav-logo">
-      <span class="nav-logo-icon"><img src="img/dna.svg" height="25px"/></span>
+      <span class="nav-logo-icon"><img src="img/dna.svg" height="25" width="25" alt="" aria-hidden="true" /></span>
       Solving Your Mysteries
     </a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -146,7 +167,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow reveal">Bespoke Genealogy Research</p>
       <h1 class="hero-title reveal">Every family<br><em>has a story.</em><br>Let's find yours.</h1>
-      <p class="hero-subtitle reveal">Professional, personal research to trace your ancestors, break through brick walls, and uncover the people and stories behind your past.</p>
+      <p class="hero-subtitle reveal">Professional genealogy and family history research based in the UK, helping clients trace ancestors, solve DNA mysteries, break through brick walls, and uncover the people and stories behind their past.</p>
       <div class="hero-actions reveal">
         <a href="#enquire" class="btn btn-primary">Start Your Journey</a>
         <a href="services.html" class="btn btn-ghost">View Services</a>
@@ -188,7 +209,13 @@
     <div class="about-teaser-inner container">
       <div class="about-teaser-image reveal">
         <div class="image-frame">
-          <img src="img/IMG_5625.JPEG"></img>
+          <img 
+            src="img/brittany-warren-genealogy-researcher.jpg"
+            alt="Brittany Warren, genealogy researcher at Solving Your Mysteries"
+            width="100%"
+            height="100%"
+            loading="lazy"
+          />
         </div>
         <div class="about-teaser-accent">Brittany Warren</div>
       </div>
@@ -201,6 +228,8 @@
       </div>
     </div>
   </section>
+
+  
 
   <!-- SERVICES PREVIEW -->
   <section class="services-preview">
@@ -405,7 +434,7 @@ Updates came regularly, and each piece of information was explained in a clear w
         <div class="enquire-text">
           <p class="section-eyebrow reveal">Get in touch</p>
           <h2 class="section-title reveal">Ready to uncover<br>your <em>family's story?</em></h2>
-          <p class="body-text reveal">Fill in the form and I'll be in touch to discuss your research needs. All enquiries are welcome — no question is too small, and no tree too tangled.</p>
+          <p class="body-text reveal">Fill in the form and I'll be in touch to discuss your research needs. All enquiries are welcome — no question is too small, and no tree too tangled. I am based in the UK and work with clients across the UK, US and worldwide.</p>
           <div class="enquire-details reveal">
             <div class="enquire-detail">
               <span class="detail-icon">&#9993;</span>
@@ -462,13 +491,39 @@ Updates came regularly, and each piece of information was explained in a clear w
     </div>
   </section>
 
+  <section class="process">
+  <div class="container">
+    <p class="section-eyebrow">How it works</p>
+    <h2 class="section-title">A clear, careful research process</h2>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>1. Initial enquiry</h3>
+        <p>You share what you already know, what you are hoping to discover, and any records or DNA results available.</p>
+      </div>
+      <div class="service-card">
+        <h3>2. Research plan</h3>
+        <p>I assess the evidence, identify likely record sets, and explain what may be possible before research begins.</p>
+      </div>
+      <div class="service-card">
+        <h3>3. Evidence-based research</h3>
+        <p>I investigate records, family networks, DNA matches, and historical context to build a reliable conclusion.</p>
+      </div>
+      <div class="service-card">
+        <h3>4. Clear report</h3>
+        <p>You receive findings in a clear, sensitive report with sources, explanations, and suggested next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
           <a href="index.html" class="footer-logo">
-            <span class="nav-logo-icon"><img src="img/dna.svg" height="25px"/></span>
+            <span class="nav-logo-icon"><img src="img/dna.svg" height="25" width="25" alt="" aria-hidden="true" /></span>
             Solving Your Mysteries
           </a>
           <p>Bespoke genealogy research,<br>carried out with care and dedication.</p>
@@ -537,14 +592,14 @@ Updates came regularly, and each piece of information was explained in a clear w
         <div class="footer-links">
           <h4>Services</h4>
           <ul>
-            <li><a href="services.html/#adoption">Adoption &amp; Unknown Parentage</a></li>
-            <li><a href="services.html/#genetic">Genetic Genealogy</a></li>
-            <li><a href="services.html/#documents">Document-Based Research</a></li>
-            <li><a href="services.html/#brickwall">Brick Wall &amp; Complex Cases</a></li>
-            <li><a href="services.html/#international">International Research</a></li>
-            <li><a href="services.html/#narrative">Historical Context &amp; Reporting</a></li>
-            <li><a href="services.html/#familytree">Family Tree Building</a></li>
-            <li><a href="services.html/#lineage">Lineage Verification</a></li>
+            <li><a href="services.html#adoption">Adoption &amp; Unknown Parentage</a></li>
+            <li><a href="services.html#genetic">Genetic Genealogy</a></li>
+            <li><a href="services.html#documents">Document-Based Research</a></li>
+            <li><a href="services.html#brickwall">Brick Wall &amp; Complex Cases</a></li>
+            <li><a href="services.html#international">International Research</a></li>
+            <li><a href="services.html#narrative">Historical Context &amp; Reporting</a></li>
+            <li><a href="services.html#familytree">Family Tree Building</a></li>
+            <li><a href="services.html#lineage">Lineage Verification</a></li>
           </ul>
         </div>
       </div>
