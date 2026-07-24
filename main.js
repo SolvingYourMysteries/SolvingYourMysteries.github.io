@@ -22,6 +22,7 @@
     navToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       nav.classList.toggle('menu-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     // Close on link click
@@ -29,8 +30,18 @@
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         nav.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        nav.classList.remove('menu-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        navToggle.focus();
+      }
     });
   }
 
@@ -149,7 +160,7 @@
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(link => {
     const href = link.getAttribute('href');
-    if (href && href.split('#')[0] === currentPage) {
+    if (href && !href.includes('#') && href === currentPage) {
       link.classList.add('active');
     }
   });
@@ -185,6 +196,8 @@
     const name    = document.getElementById('fullName');
     const email   = document.getElementById('emailAddress');
     const message = document.getElementById('message');
+    const researchType = document.getElementById('researchType');
+    const researchLocation = document.getElementById('researchLocation');
     let valid = true;
 
     clearError(name,    document.getElementById('fullNameError'));
@@ -215,7 +228,13 @@
     const params = new URLSearchParams();
     params.append('entry.227282099', name.value.trim());
     params.append('emailAddress',    email.value.trim());
-    params.append('entry.703233908', message.value.trim());
+    const contextLines = [];
+    if (researchType && researchType.value) contextLines.push(`Research type: ${researchType.value}`);
+    if (researchLocation && researchLocation.value.trim()) contextLines.push(`Main place/region: ${researchLocation.value.trim()}`);
+    const submittedMessage = contextLines.length
+      ? `${contextLines.join('\n')}\n\n${message.value.trim()}`
+      : message.value.trim();
+    params.append('entry.703233908', submittedMessage);
 
     const iframe = document.createElement('iframe');
     iframe.name = 'hidden-form-target';
