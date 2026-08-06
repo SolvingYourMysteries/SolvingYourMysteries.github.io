@@ -176,12 +176,18 @@
   const successMsg = document.getElementById('formSuccess');
 
   function showError(inputEl, errorEl) {
-    if (inputEl) inputEl.classList.add('invalid');
+    if (inputEl) {
+      inputEl.classList.add('invalid');
+      inputEl.setAttribute('aria-invalid', 'true');
+    }
     if (errorEl) errorEl.classList.add('visible');
   }
 
   function clearError(inputEl, errorEl) {
-    if (inputEl) inputEl.classList.remove('invalid');
+    if (inputEl) {
+      inputEl.classList.remove('invalid');
+      inputEl.removeAttribute('aria-invalid');
+    }
     if (errorEl) errorEl.classList.remove('visible');
   }
 

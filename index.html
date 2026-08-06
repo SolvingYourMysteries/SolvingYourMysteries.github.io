@@ -4,20 +4,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Professional Genealogist UK | Family History, DNA &amp; Cumbria Research</title>
+<title>Professional Genealogist UK | Family History &amp; DNA Research</title>
 <meta content="Professional genealogy research by Brittany Warren. Family trees, DNA and unknown parentage, brick walls, and specialist Cumbria, Cumberland and Westmorland research." name="description"/>
 <meta content="index, follow, max-image-preview:large" name="robots"/>
 <meta content="#f8f5ef" name="theme-color"/>
 <link href="https://www.solvingyourmysteries.co.uk/" rel="canonical"/>
+<link rel="preload" as="image" href="img/background.jpeg" fetchpriority="high" />
 <meta content="website" property="og:type"/>
 <meta content="Solving Your Mysteries" property="og:site_name"/>
-<meta content="Professional Genealogist UK | Solving Your Mysteries" property="og:title"/>
+<meta content="Professional Genealogist UK | Family History &amp; DNA Research" property="og:title"/>
 <meta content="Professional family history and DNA research in the UK and worldwide, with specialist experience in Cumbria, historic Cumberland and Westmorland." property="og:description"/>
 <meta content="https://www.solvingyourmysteries.co.uk/" property="og:url"/>
 <meta content="https://www.solvingyourmysteries.co.uk/img/logo.png" property="og:image"/>
 <meta content="Solving Your Mysteries logo" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Professional Genealogist UK | Solving Your Mysteries" name="twitter:title"/>
+<meta content="Professional Genealogist UK | Family History &amp; DNA Research" name="twitter:title"/>
 <meta content="Professional family history and DNA research in the UK and worldwide, with specialist experience in Cumbria, historic Cumberland and Westmorland." name="twitter:description"/>
 <meta content="https://www.solvingyourmysteries.co.uk/img/logo.png" name="twitter:image"/>
 <script type="application/ld+json">
@@ -440,20 +441,20 @@ Updates came regularly, and each piece of information was explained in a clear w
 
               <div class="form-group">
                 <label class="form-label" for="fullName">Full Name <span class="required">*</span></label>
-                <input class="form-input" type="text" id="fullName" name="entry.227282099" required placeholder="Your full name"/>
-                <span class="form-error" id="fullNameError">Please enter your full name.</span>
+<input class="form-input" type="text" id="fullName" name="entry.227282099" autocomplete="name" aria-describedby="fullNameError" required placeholder="Your full name"/>
+<span class="form-error" id="fullNameError" role="alert">Please enter your full name.</span>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="emailAddress">Email Address <span class="required">*</span></label>
-                <input class="form-input" type="email" id="emailAddress" name="emailAddress" required placeholder="your@email.com"/>
-                <span class="form-error" id="emailError">Please enter a valid email address.</span>
+<input class="form-input" type="email" id="emailAddress" name="emailAddress" autocomplete="email" aria-describedby="emailError" required placeholder="your@email.com"/>
+<span class="form-error" id="emailError" role="alert">Please enter a valid email address.</span>
               </div>
 
               <div class="form-group">
                 <label class="form-label" for="message">Message <span class="required">*</span></label>
-                <textarea class="form-input form-textarea" id="message" name="entry.703233908" required placeholder="Tell me a little about what you're looking for..."></textarea>
-                <span class="form-error" id="messageError">Please enter a message.</span>
+<textarea class="form-input form-textarea" id="message" name="entry.703233908" autocomplete="off" aria-describedby="messageError" required placeholder="Tell me a little about what you're looking for..."></textarea>
+<span class="form-error" id="messageError" role="alert">Please enter a message.</span>
               </div>
 
               <div class="form-actions">
@@ -462,13 +463,14 @@ Updates came regularly, and each piece of information was explained in a clear w
 
             </form>
 
-            <div class="form-success" id="formSuccess" style="display:none;">
+            <div class="form-success" id="formSuccess" aria-live="polite" style="display:none;">
               <div class="form-success-icon">&#10003;</div>
               <h3>Enquiry received</h3>
               <p>Thank you for getting in touch. I'll review your enquiry and be in touch within 48 hours.</p>
             </div>
 
             <p class="form-note">&#128274; Your details are kept strictly private and used only to respond to your enquiry.</p>
+            <noscript><p class="form-note">Please enable JavaScript to use this form, or email <a href="mailto:solvingyourmysteries@gmail.com">solvingyourmysteries@gmail.com</a>.</p></noscript>
           </div>
         </div>
       </div>
