@@ -1694,6 +1694,15 @@ iframe { display: block; }
   .hero-title { font-size: 2.75rem; }
   .form-card { padding: 1.5rem; }
   .service-detail-header h2 { font-size: 1.5rem; }
+  .page-hero {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .page-hero-title {
+    font-size: clamp(2rem, 10vw, 2.5rem);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
   .page-hero-ornament { font-size: 6rem; }
 }
 
