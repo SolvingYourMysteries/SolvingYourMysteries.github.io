@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://www.solvingyourmysteries.co.uk/resources.html</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -101,5 +101,11 @@
     <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.solvingyourmysteries.co.uk/how-to-use-antenati-italian-genealogy.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

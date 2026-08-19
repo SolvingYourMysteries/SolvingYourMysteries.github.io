@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Use Antenati for Italian Genealogy | Birth Records Guide</title>
+  <meta name="description" content="Learn how to use Italy's Antenati portal to find Italian birth records, search by name, browse unindexed registers and use annual indexes." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#f8f5ef" />
+  <link rel="canonical" href="https://www.solvingyourmysteries.co.uk/how-to-use-antenati-italian-genealogy.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Solving Your Mysteries" />
+  <meta property="og:title" content="How to Use Antenati for Italian Genealogy | Solving Your Mysteries" />
+  <meta property="og:description" content="A practical walkthrough of using Antenati to find Italian civil records, including an 1882 birth record from Cassano Irpino." />
+  <meta property="og:url" content="https://www.solvingyourmysteries.co.uk/how-to-use-antenati-italian-genealogy.html" />
+  <meta property="og:image" content="https://www.solvingyourmysteries.co.uk/img/giuseppes-record.png" />
+  <meta property="og:image:alt" content="Italian civil birth record for Giuseppe Cavaliere, Cassano Irpino, 1882" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Use Antenati for Italian Genealogy" />
+  <meta name="twitter:description" content="Find Italian ancestors by name, place and register, then use indexes to locate the original record on Antenati." />
+  <meta name="twitter:image" content="https://www.solvingyourmysteries.co.uk/img/giuseppes-record.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.solvingyourmysteries.co.uk/#organization",
+    "name": "Solving Your Mysteries",
+    "url": "https://www.solvingyourmysteries.co.uk/",
+    "logo": "https://www.solvingyourmysteries.co.uk/img/logo.png",
+    "founder": { "@type": "Person", "name": "Brittany Warren" },
+    "email": "solvingyourmysteries@gmail.com",
+    "description": "Professional genealogy and family history research, including DNA analysis, unknown parentage, family tree research and specialist Cumbria, Cumberland and Westmorland research.",
+    "areaServed": [
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "United States" },
+      { "@type": "Place", "name": "Worldwide" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/solvingyourmysteries/",
+      "https://www.facebook.com/people/Solving-Your-Mysteries/100086597230796/",
+      "https://open.spotify.com/show/3g8fs9ZP1UnyiO2qd4SErr",
+      "https://solvingyourmysteries.etsy.com"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Use Antenati for Italian Genealogy",
+    "description": "A practical guide to finding Italian civil records on Antenati by name, place, year and register, illustrated with an 1882 birth record from Cassano Irpino.",
+    "mainEntityOfPage": "https://www.solvingyourmysteries.co.uk/how-to-use-antenati-italian-genealogy.html",
+    "image": "https://www.solvingyourmysteries.co.uk/img/giuseppes-record.png",
+    "author": { "@type": "Person", "name": "Brittany Warren" },
+    "publisher": { "@id": "https://www.solvingyourmysteries.co.uk/#organization" },
+    "datePublished": "2026-08-19",
+    "dateModified": "2026-08-19"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.solvingyourmysteries.co.uk/" },
+      { "@type": "ListItem", "position": 2, "name": "Research Guides", "item": "https://www.solvingyourmysteries.co.uk/resources.html" },
+      { "@type": "ListItem", "position": 3, "name": "How to Use Antenati for Italian Genealogy", "item": "https://www.solvingyourmysteries.co.uk/how-to-use-antenati-italian-genealogy.html" }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="img/favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Page-specific Antenati guide styles. These sit on top of the existing site stylesheet. */
+    .antenati-intro-card {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 0;
+      margin: 2rem 0 2.5rem;
+      border: 1px solid var(--border);
+      background: var(--parchment);
+      overflow: hidden;
+    }
+    .antenati-intro-card figure { margin: 0; min-width: 0; background: var(--parchment-dark); }
+    .antenati-intro-card figure img { width: 100%; height: 100%; min-height: 330px; object-fit: cover; object-position: center; }
+    .antenati-intro-copy { padding: 2rem; }
+    .antenati-intro-copy h2 { margin-top: 0; }
+    .antenati-facts { display: grid; gap: 0.8rem; margin-top: 1.35rem; }
+    .antenati-fact { padding-top: 0.8rem; border-top: 1px solid var(--border); }
+    .antenati-fact span { display: block; font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.15rem; }
+    .antenati-fact strong { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--ink); }
+
+    .guide-banner {
+      margin: 2.25rem 0;
+      padding: 1.6rem 1.8rem;
+      border-top: 1px solid var(--border-strong);
+      border-bottom: 1px solid var(--border-strong);
+      background: linear-gradient(90deg, var(--parchment), rgba(245,240,232,0.35));
+    }
+    .guide-banner-label {
+      display: block;
+      font-family: var(--font-ui);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--sepia);
+      margin-bottom: 0.45rem;
+    }
+    .guide-banner strong { font-family: var(--font-display); font-size: 1.22rem; color: var(--ink); }
+    .guide-banner p { margin: 0.5rem 0 0; }
+    .guide-banner-important { background: var(--ink); border-color: rgba(196,168,130,0.35); }
+    .guide-banner-important .guide-banner-label { color: var(--gold-light); }
+    .guide-banner-important strong { color: var(--cream); font-size: 1.45rem; }
+    .guide-banner-important p { color: rgba(245,240,232,0.75); }
+
+    .antenati-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin: 1.8rem 0 2.3rem;
+    }
+    .antenati-flow div { background: var(--parchment); padding: 1.1rem 0.8rem; text-align: center; }
+    .antenati-flow span { display: block; font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.35rem; }
+    .antenati-flow strong { font-family: var(--font-display); font-size: 1rem; color: var(--ink); }
+
+    .record-route {
+      margin: 1.6rem 0 2rem;
+      padding: 1.5rem;
+      background: var(--parchment);
+      border: 1px solid var(--border);
+    }
+    .record-route .route-label { font-family: var(--font-ui); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.8rem; }
+    .route-items { display: flex; align-items: center; flex-wrap: wrap; gap: 0.55rem; }
+    .route-items b { font-family: var(--font-display); font-size: 1rem; font-weight: 600; }
+    .route-items i { color: var(--sepia-light); font-style: normal; }
+
+    .record-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin: 1.5rem 0 2rem;
+    }
+    .record-meta div { background: var(--parchment); padding: 1rem 1.15rem; }
+    .record-meta span { display: block; font-family: var(--font-ui); font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sepia); margin-bottom: 0.2rem; }
+    .record-meta strong { display: block; font-family: var(--font-display); font-size: 1rem; line-height: 1.4; }
+
+    .guide-figure { margin: 2rem 0 2.4rem; border: 1px solid var(--border); background: var(--parchment); }
+    .guide-figure img { width: 100%; height: auto; }
+    .guide-figure figcaption { padding: 1rem 1.2rem; font-size: 0.95rem; line-height: 1.6; font-style: italic; color: var(--ink-soft); }
+    .guide-figure-record img { max-height: 760px; object-fit: contain; background: #e8e5df; }
+
+    .italian-terms {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin: 1.5rem 0 2rem;
+    }
+    .italian-terms div { background: var(--parchment); padding: 0.9rem 1.1rem; }
+    .italian-terms strong { font-family: var(--font-display); }
+    .italian-terms span { color: var(--ink-soft); }
+
+    .guide-cta-inline {
+      margin: 3rem 0 0;
+      padding: 2.2rem;
+      background: var(--sepia);
+      color: var(--cream);
+    }
+    .guide-cta-inline .panel-kicker { color: rgba(245,240,232,0.75); }
+    .guide-cta-inline h2 { color: var(--cream); margin: 0.65rem 0 0.9rem; }
+    .guide-cta-inline p { color: rgba(245,240,232,0.85); }
+    .guide-cta-inline .btn { margin-top: 0.35rem; background: var(--cream); color: var(--ink); border-color: var(--cream); text-decoration: none; }
+    .guide-cta-inline .btn:hover { background: var(--parchment-dark); border-color: var(--parchment-dark); }
+
+    @media (max-width: 760px) {
+      .antenati-intro-card { grid-template-columns: 1fr; }
+      .antenati-intro-card figure img { min-height: 0; aspect-ratio: 4 / 3; }
+      .antenati-flow { grid-template-columns: 1fr; }
+      .record-meta, .italian-terms { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="nav" id="nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-icon"><img src="img/dna.svg" height="25" width="25" alt="" aria-hidden="true" /></span>
+      Solving Your Mysteries
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="cumbria-genealogy-research.html">Cumbria Research</a></li>
+      <li><a href="resources.html" class="active">Guides</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/#enquire" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </nav>
+  <main id="main-content">
+    <section class="page-hero page-hero-regional">
+      <div class="page-hero-content">
+        <p class="hero-eyebrow reveal">Italian genealogy guide</p>
+        <h1 class="page-hero-title reveal">How to Use <em>Antenati</em><br>for Italian Genealogy</h1>
+        <p class="page-hero-sub reveal">A practical guide to searching Italy's Antenati portal, browsing unindexed civil registers and finding an original birth record.</p>
+      </div>
+      <div class="page-hero-ornament" aria-hidden="true">☙</div>
+    </section>
+
+    <nav class="breadcrumbs container" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span><a href="resources.html">Guides</a><span>/</span><span>How to Use Antenati for Italian Genealogy</span>
+    </nav>
+
+    <section class="content-section">
+      <div class="container content-grid">
+        <article class="prose">
+          <p class="article-meta">By Brittany Warren · Published 19 August 2026</p>
+          <p class="lead">Antenati can look like a normal searchable genealogy database, but the search box is only part of the story. Many of the records are digital images of original Italian registers, so knowing how to browse by place, year and record type is often the difference between finding an ancestor and assuming the record is not there.</p>
+
+          <div class="antenati-intro-card">
+            <figure>
+              <img src="img/giuseppes-house.jpg" alt="Giuseppe Cavaliere's later home in New York" loading="lazy" decoding="async" />
+            </figure>
+            <div class="antenati-intro-copy">
+              <p class="panel-kicker">The example in this guide</p>
+              <h2>Following Giuseppe “Joseph” Cavaliere back to Italy</h2>
+              <p>For this walkthrough, I am looking for the Italian birth record of Giuseppe Cavaliere, who later used the name Joseph in the United States. I already know enough from later records to give Antenati the most useful clues: his Italian name, an exact or approximate date, and — most importantly — his comune of birth.</p>
+              <div class="antenati-facts">
+                <div class="antenati-fact"><span>Name</span><strong>Giuseppe “Joseph” Cavaliere</strong></div>
+                <div class="antenati-fact"><span>Birth</span><strong>15 March 1882 · Cassano Irpino, Avellino, Campania</strong></div>
+                <div class="antenati-fact"><span>Later life</span><strong>Died 18 May 1961 · New York, USA</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <h2>How Antenati works</h2>
+          <p><a href="https://antenati.cultura.gov.it/" target="_blank" rel="noopener">Antenati</a> is Italy's national portal for digitised historical records held by the State Archives. For family historians, its civil registration collections are especially valuable. Depending on the place and period, you may find births, marriages, deaths, marriage publications and attachments, indexes and other civil-status material. State Archive pages can also point towards other genealogical collections.</p>
+          <p>The most important thing to understand is that Antenati is organised primarily around <strong>archives, places and registers</strong>. Some names have been indexed and can be searched directly, but many surviving pages are available only as images. If a record has not been indexed, a name search will not magically find the writing on the page.</p>
+          <p>That is why knowing the Italian <strong>comune</strong> — the town or municipality where the event was registered — can be more useful than knowing an exact name spelling.</p>
+
+          <div class="antenati-flow" aria-label="Antenati research workflow">
+            <div><span>Start</span><strong>Name</strong></div>
+            <div><span>Narrow</span><strong>Comune</strong></div>
+            <div><span>Choose</span><strong>Register</strong></div>
+            <div><span>Browse</span><strong>Index</strong></div>
+            <div><span>Verify</span><strong>Original</strong></div>
+          </div>
+
+          <div class="guide-banner">
+            <span class="guide-banner-label">Helpful tip</span>
+            <strong>The town is often your best search term.</strong>
+            <p>If you know only “Italy”, the search can become enormous. If you know the exact comune, you can usually work out which archive, series and years are relevant.</p>
+          </div>
+
+          <h2>Start with a name search — but keep it flexible</h2>
+          <p>I still begin with <strong>Search by Name</strong>. If the ancestor has been indexed, this can save a great deal of time. Start with the name and surname you expect to find, then remove details if the search is too restrictive.</p>
+          <p>Giuseppe is a good example of why flexibility matters. In American records he could appear as <strong>Joseph</strong>, while his Italian birth record uses <strong>Giuseppe</strong>. Other ancestors may have multiple given names, shortened names, spelling variants or transcription errors.</p>
+          <p>If the full name produces nothing useful, try the surname alone, broaden the year, or remove the place. The filters on the results page can then help you narrow the matches.</p>
+
+          <div class="guide-banner guide-banner-important">
+            <span class="guide-banner-label">A good rule to remember</span>
+            <strong>No search result does not mean no record exists.</strong>
+            <p>The name search covers indexed information. Antenati may still hold the correct register and the exact page you need.</p>
+          </div>
+
+          <h2>When the name search is not enough, search the registers</h2>
+          <p>The next route is <strong>Search the Registers</strong>. Instead of asking Antenati to find Giuseppe by name, I ask it to show me the right body of records.</p>
+          <p>For Giuseppe I already know three pieces of information:</p>
+          <ul>
+            <li><strong>Località:</strong> Cassano Irpino</li>
+            <li><strong>Anno:</strong> 1882</li>
+            <li><strong>Tipologia:</strong> Nati</li>
+          </ul>
+          <p><em>Nati</em> means births. The other common categories include <em>Matrimoni</em> for marriages and <em>Morti</em> for deaths. You may also see more specialised descriptions such as <em>pubblicazioni</em>, <em>allegati</em> or multi-year indexes.</p>
+
+          <div class="record-route">
+            <div class="route-label">The route for Giuseppe's birth</div>
+            <div class="route-items"><b>Cassano Irpino</b><i>→</i><b>1882</b><i>→</i><b>Nati</b><i>→</i><b>View the register</b></div>
+          </div>
+
+          <h2>Check the collection details before you start browsing</h2>
+          <p>Antenati tells you where the register sits within the archival collection. These details matter because they let you record exactly what you searched and return to the same source later.</p>
+
+          <div class="record-meta">
+            <div><span>Record type</span><strong>Nati</strong></div>
+            <div><span>Collection</span><strong>Stato civile italiano</strong></div>
+            <div><span>Series</span><strong>Cassano Irpino</strong></div>
+            <div><span>Stored by</span><strong>Archivio di Stato di Avellino</strong></div>
+            <div><span>Comune / Località</span><strong>Cassano Irpino</strong></div>
+            <div><span>Segnatura attuale</span><strong>864</strong></div>
+          </div>
+
+          <p>You can browse the <a href="https://antenati.cultura.gov.it/search-registry/?tipologia=Nati&amp;serie=497503&amp;lang=it" target="_blank" rel="noopener">Cassano Irpino birth-register series on Antenati</a>. If you are keeping a research log, I recommend recording the archive, collection, town, year, typology and archival reference rather than writing only “found on Antenati”.</p>
+
+          <h2>Use the register's own index to save time</h2>
+          <p>Opening a register may give you hundreds of images. Before reading from page one to the end, check the beginning and the end of the volume for an annual or alphabetical index. These handwritten indexes were created as part of the original record-keeping system and can point you directly to an act number.</p>
+          <p>The arrangement varies. Some are alphabetical by surname, some by given name, and some are only approximately alphabetical. Work out how that particular volume is organised before assuming someone is missing.</p>
+
+          <figure class="guide-figure">
+            <img src="img/giuseppes-index.png" alt="Handwritten index in the Cassano Irpino birth register" loading="lazy" decoding="async" />
+            <figcaption>An index within the register can reduce a page-by-page search to a much smaller task. Treat it as a finding aid: use it to locate the act, then read the original record itself.</figcaption>
+          </figure>
+
+          <div class="guide-banner">
+            <span class="guide-banner-label">Do not stop at the index</span>
+            <strong>The index points you to the evidence; it is not the evidence itself.</strong>
+            <p>An index may contain only a name and reference number. The full entry can include relationships, ages, occupations, residence, addresses and witnesses.</p>
+          </div>
+
+          <h2>From the index to Giuseppe's original birth record</h2>
+          <p>The register leads to <strong>Act No. 27</strong>, headed <strong>Giuseppe Cavaliere</strong>. This is where the original image becomes much more valuable than a simple search result.</p>
+
+          <figure class="guide-figure guide-figure-record">
+            <img src="img/giuseppes-record.png" alt="1882 birth record for Giuseppe Cavaliere in Cassano Irpino" loading="lazy" decoding="async" />
+            <figcaption>Birth record for Giuseppe Cavaliere, Cassano Irpino, 1882. Portale Antenati, Stato civile italiano, Cassano Irpino, Nati; Archivio di Stato di Avellino, segnatura attuale 864.</figcaption>
+          </figure>
+
+          <h2>Read the dates carefully</h2>
+          <p>This particular entry is a useful reminder that the date at the top of an Italian civil record is not always the date of the event itself. Giuseppe's act was drawn up on <strong>16 March 1882</strong>, while the body of the record states that the child was born on <strong>15 March 1882</strong>.</p>
+          <p>If I copied only the first date I saw, I could accidentally record Giuseppe's registration date as his birth date. Always read the sentence describing when the birth, marriage or death actually occurred.</p>
+
+          <h2>Read beyond the name and date</h2>
+          <p>The original record also names <strong>Bernardino Cavaliere</strong> as the person making the declaration and places the event in Cassano Irpino. The surrounding text and witness section are exactly why I prefer the original image whenever it survives.</p>
+          <p>Italian civil records can contain valuable details about parents, spouses, ages, occupations, residences, house addresses and witnesses. Not every record contains every detail, and handwriting can be difficult, but those extra lines may be what connects one generation to the next.</p>
+          <p>It is also worth checking the images immediately before and after the entry. Marginal notes, continuations, attachments or later annotations can sometimes appear elsewhere in a register.</p>
+
+          <h2>Useful Italian terms on Antenati</h2>
+          <div class="italian-terms">
+            <div><strong>Nome</strong> <span>— given name</span></div>
+            <div><strong>Cognome</strong> <span>— surname</span></div>
+            <div><strong>Località</strong> <span>— place / locality</span></div>
+            <div><strong>Anno</strong> <span>— year</span></div>
+            <div><strong>Nati</strong> <span>— births</span></div>
+            <div><strong>Matrimoni</strong> <span>— marriages</span></div>
+            <div><strong>Morti</strong> <span>— deaths</span></div>
+            <div><strong>Pubblicazioni</strong> <span>— marriage banns / publications</span></div>
+            <div><strong>Vedi il registro</strong> <span>— view the register</span></div>
+            <div><strong>Conservato da</strong> <span>— held / preserved by</span></div>
+            <div><strong>Segnatura</strong> <span>— archival reference</span></div>
+            <div><strong>Indice</strong> <span>— index</span></div>
+          </div>
+
+          <h2>What if the year you need is not online?</h2>
+          <p>Before assuming a record has been destroyed, look at the years Antenati actually makes available for that comune and record type. Coverage varies considerably between places and periods. A missing year may mean that the State Archive does not hold that series, that it has not yet been digitised or published, or that there is a genuine gap in the surviving registers.</p>
+          <p>Check the relevant State Archive information and consider the comune itself if the required civil register is not available online. You can also approach the problem sideways: a sibling's birth, a parent's death or a marriage record may provide the names and places needed to continue the line.</p>
+
+          <div class="guide-banner guide-banner-important">
+            <span class="guide-banner-label">The Antenati mindset</span>
+            <strong>Search the index. Browse the register. Verify the original.</strong>
+            <p>Think of Antenati as a huge digital reading room rather than a database in which every surviving person can be found by typing a name.</p>
+          </div>
+
+          <h2>Keep a record of what you searched</h2>
+          <p>When a register does not contain the person you expected, that negative search can still be useful — but only if you record it. Note the town, year, record type, archive, register reference and pages or index ranges checked. This prevents you from repeating the same work months later and makes it easier to see where the next search should go.</p>
+
+          <div class="guide-cta-inline">
+            <p class="panel-kicker">Professional support</p>
+            <h2>Found an Italian record but not sure what it says — or where to look next?</h2>
+            <p>If you have reached a brick wall with an Italian ancestor, send me the names, dates, places and records you already have. I can assess the evidence, work through the available collections and identify the strongest next step.</p>
+            <a href="/#enquire" class="btn btn-primary">Make an Enquiry</a>
+          </div>
+        </article>
+
+        <aside class="sidebar-card">
+          <p class="panel-kicker">Italian family history</p>
+          <h2>Need help with your own ancestor?</h2>
+          <p>Send the details you already know, including names, dates, Italian places and any records you have found. I can help determine where the evidence leads next.</p>
+          <a href="/#enquire" class="btn btn-primary">Make an Enquiry</a>
+          <hr>
+          <h3>Continue reading</h3>
+          <ul class="link-list">
+            <li><a href="resources.html">All research guides</a></li>
+            <li><a href="family-tree-research.html">Family tree research</a></li>
+            <li><a href="brick-wall-genealogy.html">Brick wall research</a></li>
+            <li><a href="hiring-a-professional-genealogist.html">Hiring a professional genealogist</a></li>
+          </ul>
+          <hr>
+          <h3>Official resource</h3>
+          <ul class="link-list">
+            <li><a href="https://antenati.cultura.gov.it/" target="_blank" rel="noopener">Visit Portale Antenati</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+<footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <span class="nav-logo-icon"><img src="img/dna.svg" height="25" width="25" alt="" aria-hidden="true" /></span>
+            Solving Your Mysteries
+          </a>
+          <p>Bespoke genealogy research,<br>carried out with care and dedication.</p>
+          <div class="footer-social">
+            <p class="footer-social-label">Find me elsewhere</p>
+            <div class="footer-social-links">
+              <a href="https://www.instagram.com/solvingyourmysteries" class="footer-social-item" target="_blank" rel="noopener">
+                <span class="footer-social-icon"><img src="img/instagram-logo.png" alt="Instagram" loading="lazy" decoding="async" /></span>
+                <span class="footer-social-text"><span class="footer-social-name">Instagram</span><span class="footer-social-handle">@solvingyourmysteries</span></span>
+              </a>
+              <a href="https://www.facebook.com/people/Solving-Your-Mysteries/100086597230796/" class="footer-social-item" target="_blank" rel="noopener">
+                <span class="footer-social-icon"><img src="img/facebook-logo.png" alt="Facebook" loading="lazy" decoding="async" /></span>
+                <span class="footer-social-text"><span class="footer-social-name">Facebook</span><span class="footer-social-handle">Solving Your Mysteries</span></span>
+              </a>
+              <a href="https://open.spotify.com/show/3g8fs9ZP1UnyiO2qd4SErr" class="footer-social-item" target="_blank" rel="noopener">
+                <span class="footer-social-icon"><img src="img/podcast-logo.jpg" alt="Red Herrings Podcast" loading="lazy" decoding="async" /></span>
+                <span class="footer-social-text"><span class="footer-social-name">Red Herrings Podcast</span><span class="footer-social-handle">Listen now</span></span>
+              </a>
+              <a href="https://solvingyourmysteries.etsy.com" class="footer-social-item" target="_blank" rel="noopener">
+                <span class="footer-social-icon"><img src="img/etsy-logo.png" alt="Etsy" loading="lazy" decoding="async" /></span>
+                <span class="footer-social-text"><span class="footer-social-name">Etsy Store</span><span class="footer-social-handle">Shop now</span></span>
+              </a>
+              <a href="https://bramptonpreservationtrust.co.uk" class="footer-social-item" target="_blank" rel="noopener">
+                <span class="footer-social-icon"><img src="img/brampton-preservation-trust-logo.jpg" alt="Brampton Preservation Trust" loading="lazy" decoding="async" /></span>
+                <span class="footer-social-text"><span class="footer-social-name">Brampton Preservation Trust</span><span class="footer-social-handle">Preserving local heritage</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cumbria-genealogy-research.html">Cumbria Research</a></li>
+            <li><a href="resources.html">Research Guides</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+            <li><a href="/#enquire">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="family-tree-research.html">Family Tree Research</a></li>
+            <li><a href="dna-genealogy-research.html">DNA Genealogy</a></li>
+            <li><a href="unknown-parentage-research.html">Unknown Parentage</a></li>
+            <li><a href="brick-wall-genealogy.html">Brick Wall Research</a></li>
+            <li><a href="services.html#documents">Document Research</a></li>
+            <li><a href="services.html#lineage">Lineage Verification</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Guides</h4>
+          <ul>
+            <li><a href="cumberland-cumbria-genealogy-guide.html">Tracing Cumberland Ancestors</a></li>
+            <li><a href="cumbria-archive-centres-family-history.html">Cumbria Archive Centres</a></li>
+            <li><a href="hiring-a-professional-genealogist.html">Hiring a Genealogist</a></li>
+            <li><a href="cumbria-genealogy-research.html">Cumbria, Cumberland &amp; Westmorland</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>&copy; 2026 Solving Your Mysteries. All rights reserved.</p>
+        <p class="footer-tagline"><em>“The past is never dead. It’s not even past.”</em></p>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js" defer></script>
+  <script>
+    window.goatcounter = { path: function(p) { return location.host + p; } };
+  </script>
+  <script data-goatcounter="https://cdjb.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
