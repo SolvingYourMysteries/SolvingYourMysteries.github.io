@@ -21,6 +21,9 @@
   --font-body:    'Cormorant Garamond', Georgia, serif;
   --font-ui:      'Jost', sans-serif;
 
+  /* Shared Font Awesome icon tokens */
+  --icon-gap: 0.55em;
+
   --nav-h: 72px;
   --max-w: 1200px;
   --radius: 2px;
@@ -28,6 +31,22 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
 }
+
+/* ---- FONT AWESOME ICON SYSTEM ----------------------------- */
+.icon,
+.fa-icon {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.icon-research-tip { color: var(--gold); }
+.icon-important { color: var(--gold-light); }
+.icon-dna, .icon-archive, .icon-record { color: var(--sepia); }
+.icon-location { color: var(--gold); }
+.icon-person, .icon-tree, .icon-search, .icon-privacy { color: var(--sepia); }
+.icon-arrow { width: auto; margin-left: 0.15em; transition: transform 0.3s var(--ease-out); }
 
 /* ---- RESET ------------------------------------------------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -100,6 +119,7 @@ iframe { display: block; }
 .text-link:hover { color: var(--gold); gap: 1rem; }
 .text-link span { transition: transform 0.3s var(--ease-out); }
 .text-link:hover span { transform: translateX(4px); }
+.text-link:hover .icon-arrow { transform: translateX(4px); }
 
 /* ---- BUTTONS ---------------------------------------------- */
 .btn {
@@ -553,7 +573,11 @@ iframe { display: block; }
 .service-card-icon {
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
-  filter: grayscale(0.3);
+  color: var(--sepia);
+}
+.service-card-icon i,
+.service-card-icon svg {
+  color: inherit;
 }
 .service-card h3 {
   font-family: var(--font-display);
@@ -614,6 +638,11 @@ iframe { display: block; }
   letter-spacing: 0.2em;
   margin-bottom: 2rem;
 }
+.review-stars i,
+.review-stars svg {
+  width: auto;
+  color: inherit;
+}
 .review-card blockquote {
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 2.5vw, 1.6rem);
@@ -652,6 +681,12 @@ iframe { display: block; }
   border-color: var(--sepia-light);
   color: var(--cream);
   background: rgba(139,111,71,0.1);
+}
+
+.review-btn i,
+.review-btn svg {
+  color: inherit;
+  width: 0.9em;
 }
 .reviews-dots {
   display: flex;
@@ -699,6 +734,12 @@ iframe { display: block; }
   font-size: 1.1rem;
   width: 24px;
   text-align: center;
+  color: var(--sepia);
+}
+.detail-icon i,
+.detail-icon svg {
+  width: auto;
+  color: inherit;
 }
 /* ---- ENQUIRY FORM ----------------------------------------- */
 .form-card {
@@ -871,6 +912,11 @@ iframe { display: block; }
   justify-content: center;
   margin: 0 auto 1.5rem;
 }
+.form-success-icon i,
+.form-success-icon svg {
+  color: inherit;
+}
+
 .form-success h3 {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -884,13 +930,6 @@ iframe { display: block; }
   font-weight: 300;
   color: var(--ink-soft);
   line-height: 1.7;
-}
-.form-note {
-  font-family: var(--font-ui);
-  font-size: 0.75rem;
-  color: var(--sepia);
-  margin-top: 1rem;
-  opacity: 0.8;
 }
 .form-intro {
   font-family: var(--font-body);
@@ -910,6 +949,12 @@ iframe { display: block; }
   color: var(--sepia);
   margin-top: 1rem;
   opacity: 0.8;
+}
+
+.form-note i,
+.form-note svg {
+  color: inherit;
+  margin-right: 0.35rem;
 }
 
 /* ---- PAGE HERO -------------------------------------------- */
@@ -977,6 +1022,7 @@ iframe { display: block; }
   line-height: 1;
   user-select: none;
 }
+.page-hero-ornament .icon { width: auto; color: var(--gold-light); }
 
 /* ---- SERVICES DETAIL -------------------------------------- */
 .services-detail {
@@ -1150,6 +1196,7 @@ iframe { display: block; }
   font-size: 1.25rem;
   flex-shrink: 0;
   margin-top: 0.1rem;
+  color: var(--sepia);
 }
 .approach-pillar h4 {
   font-family: var(--font-display);
@@ -2012,6 +2059,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .prose a { color: var(--sepia); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .prose a:hover { color: var(--gold); }
 .callout { margin: 2rem 0; font-style: italic; color: var(--ink-soft); }
+.callout > .icon:first-child { margin-right: var(--icon-gap); font-style: normal; }
+
+/* Guide banners use the same semantic icon vocabulary on every future guide. */
+.guide-banner-label { display: flex; align-items: center; gap: var(--icon-gap); }
+.guide-banner-label .icon { width: auto; }
 .sidebar-card { position: sticky; top: calc(var(--nav-h) + 2rem); }
 .sidebar-card h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0.75rem 0 1rem; line-height: 1.25; }
 .sidebar-card h3 { font-family: var(--font-display); margin-bottom: 0.75rem; }

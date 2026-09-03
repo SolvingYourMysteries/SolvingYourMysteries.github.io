@@ -124,6 +124,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Keep Font Awesome icons on the About page consistent with the site's restrained palette. */
+    .value-icon { color: var(--sepia); }
+    .value-icon i, .value-icon svg,
+    .milestone-icon i, .milestone-icon svg,
+    .credential-icon i, .credential-icon svg { color: inherit; }
+  </style>
+  <script src="https://kit.fontawesome.com/dbc42a0490.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -155,7 +164,7 @@
       <p class="hero-eyebrow reveal">The researcher</p>
       <h1 class="page-hero-title reveal">About<br><em>Solving Your Mysteries</em></h1>
     </div>
-    <div class="page-hero-ornament">&#9753;</div>
+<div class="page-hero-ornament" aria-hidden="true"><i class="fa-solid fa-user" aria-hidden="true"></i></div>
   </section>
 
   <!-- ABOUT MAIN -->
@@ -216,7 +225,7 @@
           <p class="body-text reveal">For months, I studied her DNA matches in secret. I never told her what I was doing. I taught myself how to cluster relatives, analyze shared centimorgans, and map overlapping surnames. I reconstructed family networks from just fragments. I learned how to build family trees with barely any information. I learned what a fourth cousin twice removed was. One evening, during my senior year of high school, I had had enough of the guesswork and constant frustration of hitting dead-ends and brickwalls. I spent hours at the dining room table, taping together dozens of pieces of graph paper to map out her DNA matches using colored pens, markers, and highlighters. Very quickly the table disappeared beneath my work. That was the night I identified one of her biological parents. </p>
 
           <div class="about-milestone reveal">
-            <div class="milestone-icon">&#9998;</div>
+            <div class="milestone-icon"><i class="fa-solid fa-dna" aria-hidden="true"></i></div>
             <p>I taught myself how to cluster relatives, analyze shared centimorgans, and map overlapping surnames. I reconstructed family networks from just fragments.</p>
           </div>
 
@@ -243,32 +252,32 @@
       </div>
       <div class="values-grid">
         <div class="value-card reveal">
-          <div class="value-icon">&#128269;</div>
+          <div class="value-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
           <h3>Thorough</h3>
           <p>I don't stop at the first result. I check, cross-reference, and follow every lead until I'm confident in what I've found. Quality matters more than speed.</p>
         </div>
         <div class="value-card reveal">
-          <div class="value-icon">&#128220;</div>
+          <div class="value-icon"><i class="fa-solid fa-file-circle-check" aria-hidden="true"></i></div>
           <h3>Evidenced</h3>
           <p>Everything I present comes with a source. You'll always know where information came from and how reliable it is — no guesswork, no assumptions.</p>
         </div>
         <div class="value-card reveal">
-          <div class="value-icon">&#128172;</div>
+          <div class="value-icon"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
           <h3>Communicative</h3>
           <p>I keep you in the loop throughout the research. If something surprising turns up — positive or negative — you'll hear about it promptly.</p>
         </div>
         <div class="value-card reveal">
-          <div class="value-icon">&#128274;</div>
+          <div class="value-icon"><i class="fa-solid fa-lock" aria-hidden="true"></i></div>
           <h3>Discreet</h3>
           <p>Family histories sometimes uncover sensitive information. Everything you share with me and everything I discover is handled with complete confidentiality.</p>
         </div>
         <div class="value-card reveal">
-          <div class="value-icon">&#127775;</div>
+          <div class="value-icon"><i class="fa-solid fa-heart" aria-hidden="true"></i></div>
           <h3>Passionate</h3>
           <p>This isn't just a job. I'm genuinely excited by each new family puzzle, and that enthusiasm shows in the work I produce.</p>
         </div>
         <div class="value-card reveal">
-          <div class="value-icon">&#129309;</div>
+          <div class="value-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
           <h3>Personal</h3>
           <p>You'll always be working directly with me — not a team, not an algorithm. Your project gets my full, individual attention from start to finish.</p>
         </div>
@@ -290,7 +299,7 @@
         </div>
         <div class="credentials-items reveal">
           <div class="credential-item credential-item-degrees">
-            <span class="credential-icon">&#9998;</span>
+            <span class="credential-icon"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></span>
             <div>
               <h4>Academic Degrees</h4>
               <div class="degree-list">
@@ -320,14 +329,14 @@
             </div>
           </div>
           <div class="credential-item">
-            <span class="credential-icon">&#9733;</span>
+            <span class="credential-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
             <div>
               <h4>Years of Experience</h4>
               <p>17+ years of genealogical research experience</p>
             </div>
           </div>
           <div class="credential-item">
-            <span class="credential-icon">&#9733;</span>
+            <span class="credential-icon"><i class="fa-solid fa-compass" aria-hidden="true"></i></span>
             <div>
               <h4>Specialist Areas</h4>
               <ul>
@@ -341,7 +350,7 @@
             </div>
           </div>
           <div class="credential-item">
-            <span class="credential-icon">&#9733;</span>
+            <span class="credential-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span>
             <div>
               <h4>Training & Qualifications</h4>
               <p> Self-directed training in genealogical research and genetic genealogy, developed through over 17 years of practical experience working with archival records, historical documents, and DNA analysis across multiple regions.</p>
