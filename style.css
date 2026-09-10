@@ -1660,12 +1660,8 @@ iframe { display: block; }
   background: rgba(139,111,71,0.06);
 }
 .footer-social-icon {
-  width: 100px;
-  height: 100px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 44px;
+  height: 44px;
 }
 .footer-social-icon img {
   width: 100%;

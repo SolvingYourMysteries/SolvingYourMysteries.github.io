@@ -44,13 +44,13 @@
   </url>
   <url>
     <loc>https://www.solvingyourmysteries.co.uk/about.html</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.solvingyourmysteries.co.uk/resources.html</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://www.solvingyourmysteries.co.uk/case-studies.html</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -107,5 +107,14 @@
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://solvingyourmysteries.co.uk/henry-logan-kentucky-canada-genealogy-case-study.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+
+  <url>
+    <loc>https://solvingyourmysteries.co.uk/new-gedmatch-interface-features.html</loc>
+    <lastmod>2026-08-25</lastmod>
   </url>
 </urlset>
