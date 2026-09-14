@@ -2754,3 +2754,39 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: calc(var(--nav-h) + 1rem) 1.25rem 2rem;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+    line-height: 1.05;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    gap: 0.75rem;
+  }
+
+  .hero-actions.reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-scroll-hint {
+    display: none;
+  }
+}
