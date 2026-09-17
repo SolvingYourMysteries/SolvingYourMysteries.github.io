@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 | This Page Has Disappeared from the Records</title>
+  <meta name="description" content="This page could not be found. Return to Solving Your Mysteries to explore genealogy research services, guides and family history resources." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="theme-color" content="#f8f5ef" />
+
+  <link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/img/favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    .not-found-hero {
+      min-height: 62vh;
+      align-items: center;
+      padding-bottom: 4.5rem;
+    }
+
+    .not-found-hero::before {
+      background:
+        radial-gradient(ellipse 60% 70% at 30% 50%, rgba(184, 134, 11, 0.13) 0%, transparent 72%),
+        linear-gradient(155deg, #0e0b08 0%, #241b14 100%);
+    }
+
+    .not-found-code {
+      display: block;
+      margin-bottom: 0.7rem;
+      font-family: var(--font-ui);
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 500;
+      line-height: 0.9;
+      letter-spacing: 0.04em;
+      color: rgba(196, 168, 130, 0.16);
+    }
+
+    .not-found-hero .page-hero-title {
+      max-width: 850px;
+      margin-top: 0;
+    }
+
+    .not-found-hero .page-hero-sub {
+      max-width: 700px;
+    }
+
+    .not-found-section {
+      padding: 5.5rem 0 6.5rem;
+      background: var(--cream);
+    }
+
+    .not-found-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 4.5rem;
+      align-items: start;
+    }
+
+    .not-found-copy h2,
+    .not-found-panel h2 {
+      font-family: var(--font-display);
+      color: var(--ink);
+    }
+
+    .not-found-copy h2 {
+      margin-bottom: 1rem;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.2;
+    }
+
+    .not-found-copy > p {
+      max-width: 680px;
+      margin-bottom: 1.25rem;
+      color: var(--ink-soft);
+    }
+
+    .not-found-theories {
+      display: grid;
+      gap: 0;
+      margin: 2rem 0 2.4rem;
+      border-top: 1px solid var(--border-strong);
+    }
+
+    .not-found-theory {
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1.15rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .not-found-theory span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--border-strong);
+      border-radius: 50%;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      color: var(--sepia);
+    }
+
+    .not-found-theory p {
+      margin: 0;
+      color: var(--ink-soft);
+    }
+
+    .not-found-theory strong {
+      display: block;
+      margin-bottom: 0.15rem;
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      color: var(--ink);
+    }
+
+    .not-found-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .not-found-secondary {
+      border-color: var(--ink);
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .not-found-secondary:hover {
+      background: var(--parchment);
+      border-color: var(--sepia);
+      color: var(--sepia);
+    }
+
+    .not-found-panel {
+      padding: 2.2rem;
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--sepia);
+    }
+
+    .not-found-panel h2 {
+      margin: 0.65rem 0 1.3rem;
+      font-size: 1.65rem;
+      line-height: 1.25;
+    }
+
+    .research-record {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .research-row {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .research-row span {
+      display: block;
+      margin-bottom: 0.15rem;
+      font-family: var(--font-ui);
+      font-size: 0.66rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sepia);
+    }
+
+    .research-row strong {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .not-found-note {
+      margin-top: 1.4rem;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    .not-found-tip {
+      margin-top: 2.2rem;
+      padding: 1.5rem 1.7rem;
+      background: var(--ink);
+      color: rgba(245, 240, 232, 0.8);
+    }
+
+    .not-found-tip strong {
+      color: var(--cream);
+    }
+
+    @media (max-width: 850px) {
+      .not-found-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .not-found-hero {
+        min-height: 56vh;
+        padding-bottom: 3.5rem;
+      }
+
+      .not-found-section {
+        padding: 4rem 0 5rem;
+      }
+
+      .not-found-panel {
+        padding: 1.5rem;
+      }
+
+      .not-found-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .not-found-actions .btn {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <script src="https://kit.fontawesome.com/dbc42a0490.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-icon"><img src="/img/dna.svg" height="25" width="25" alt="" aria-hidden="true" /></span>
+      Solving Your Mysteries
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/cumbria-genealogy-research.html">Cumbria Research</a></li>
+      <li><a href="/resources.html">Guides</a></li>
+      <li><a href="/case-studies.html">Case Studies</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a class="nav-cta" href="/#enquire">Get in Touch</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="page-hero not-found-hero">
+      <div class="page-hero-content">
+        <p class="hero-eyebrow reveal">Research note · Page not found</p>
+        <span class="not-found-code reveal" aria-hidden="true">404</span>
+        <h1 class="page-hero-title reveal">This page has <em>disappeared from the records.</em></h1>
+        <p class="page-hero-sub reveal">I checked the census, searched the parish register and asked three elderly relatives. Nothing. It may have changed its name, moved county, or simply never existed.</p>
+      </div>
+      <div class="page-hero-ornament" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+    </section>
+
+    <section class="not-found-section">
+      <div class="container not-found-grid">
+        <div class="not-found-copy">
+          <p class="section-eyebrow">Possible explanations</p>
+          <h2>Every good mystery needs a few theories.</h2>
+          <p>The link you followed may be old, mistyped or pointing to a page that has moved. In true genealogy fashion, there are several perfectly plausible explanations.</p>
+
+          <div class="not-found-theories" aria-label="Possible reasons the page could not be found">
+            <div class="not-found-theory">
+              <span>01</span>
+              <p><strong>It changed its surname.</strong> Apparently websites can be just as unhelpful as ancestors.</p>
+            </div>
+            <div class="not-found-theory">
+              <span>02</span>
+              <p><strong>It moved across a boundary.</strong> Try explaining that to a search engine using an 1841 county map.</p>
+            </div>
+            <div class="not-found-theory">
+              <span>03</span>
+              <p><strong>The record keeper got creative.</strong> One letter out, six letters in. You know how it goes.</p>
+            </div>
+            <div class="not-found-theory">
+              <span>04</span>
+              <p><strong>The link is simply wrong.</strong> Less romantic, but considerably more likely.</p>
+            </div>
+          </div>
+
+          <div class="not-found-actions">
+            <a class="btn btn-primary" href="/">Return Home</a>
+            <a class="btn not-found-secondary" href="/start-your-family-tree.html">Start Your Family Tree</a>
+            <a class="btn not-found-secondary" href="/resources.html">Browse Genealogy Guides</a>
+          </div>
+
+          <div class="not-found-tip">
+            <strong>Genealogy rule:</strong> “No record found” does not always mean the record does not exist. In this particular case, though, the evidence is looking fairly conclusive.
+          </div>
+        </div>
+
+        <aside class="not-found-panel">
+          <p class="panel-kicker">Research conclusion</p>
+          <h2>Page not located</h2>
+          <div class="research-record">
+            <div class="research-row">
+              <span>Subject</span>
+              <strong>The page you requested</strong>
+            </div>
+            <div class="research-row">
+              <span>Last known residence</span>
+              <strong>Somewhere on this website</strong>
+            </div>
+            <div class="research-row">
+              <span>Sources checked</span>
+              <strong>Links, bookmarks &amp; one suspicious browser</strong>
+            </div>
+            <div class="research-row">
+              <span>Status</span>
+              <strong>Missing</strong>
+            </div>
+            <div class="research-row">
+              <span>Confidence</span>
+              <strong>Annoyingly high</strong>
+            </div>
+          </div>
+          <p class="not-found-note">If you arrived here from a link on this website, feel free to <a href="/#enquire">let me know</a> so I can investigate the missing page.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <span class="nav-logo-icon"><img src="/img/dna.svg" height="25" width="25" alt="" aria-hidden="true" /></span>
+            Solving Your Mysteries
+          </a>
+          <p>Bespoke genealogy research,<br />carried out with care and dedication.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/resources.html">Research Guides</a></li>
+            <li><a href="/case-studies.html">Case Studies</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/#enquire">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Popular Guides</h4>
+          <ul>
+            <li><a href="/start-your-family-tree.html">How to Start a Family Tree</a></li>
+            <li><a href="/how-to-use-antenati-italian-genealogy.html">Using Antenati for Italian Genealogy</a></li>
+            <li><a href="/cumberland-cumbria-genealogy-guide.html">Tracing Cumberland Ancestors</a></li>
+            <li><a href="/hiring-a-professional-genealogist.html">Hiring a Genealogist</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Research</h4>
+          <ul>
+            <li><a href="/family-tree-research.html">Family Tree Research</a></li>
+            <li><a href="/dna-genealogy-research.html">DNA Genealogy</a></li>
+            <li><a href="/brick-wall-genealogy.html">Brick Wall Research</a></li>
+            <li><a href="/cumbria-genealogy-research.html">Cumbria Research</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2026 Solving Your Mysteries. All rights reserved.</p>
+        <p class="footer-tagline"><em>“The past is never dead. It’s not even past.”</em></p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="/main.js"></script>
+  <script>
+    window.goatcounter = { path: function (p) { return location.host + p; } };
+  </script>
+  <script async data-goatcounter="https://cdjb.goatcounter.com/count" src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
