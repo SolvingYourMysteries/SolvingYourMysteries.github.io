@@ -2996,3 +2996,16 @@ body {
     margin: 1.5rem auto;
   }
 }
+
+.regional-feature-copy .body-text a {
+  color: var(--sepia);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.2s;
+}
+
+.regional-feature-copy .body-text a:hover {
+  color: var(--gold);
+}
