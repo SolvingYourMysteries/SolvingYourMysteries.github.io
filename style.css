@@ -2944,3 +2944,55 @@ body {
     display: none;
   }
 }
+
+.case-study-image {
+  width: 240px;
+  margin-top: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.case-study-image-right {
+  float: right;
+  margin-left: 1.75rem;
+}
+
+.case-study-image-left {
+  float: left;
+  margin-right: 1.75rem;
+}
+
+.case-study-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #d8c9b5;
+}
+
+.case-study-image figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: #765f51;
+}
+
+.case-study-image + p {
+  margin-top: 0;
+}
+
+/* Stop floated images interfering with following sections */
+.case-study-content h2,
+.case-study-content h3 {
+  clear: both;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .case-study-image,
+  .case-study-image-right,
+  .case-study-image-left {
+    float: none;
+    width: min(70%, 280px);
+    margin: 1.5rem auto;
+  }
+}
