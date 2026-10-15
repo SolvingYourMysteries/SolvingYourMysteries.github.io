@@ -1,0 +1,112 @@
+/* IrishGenealogy.ie guide: styles scoped to the new article. */
+.irish-guide .page-hero-title { font-size: clamp(2rem, 4.4vw, 4.1rem); overflow-wrap: break-word; }
+.irish-guide .page-hero-sub { max-width: 760px; }
+.irish-guide .prose { min-width: 0; }
+.irish-guide [id] { scroll-margin-top: calc(var(--nav-h) + 1.5rem); }
+.irish-guide .prose h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--ink); line-height: 1.4; margin: 1.8rem 0 .8rem; }
+.irish-guide .guide-banner { margin: 2.25rem 0; padding: 1.6rem 1.8rem; border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); background: var(--parchment); }
+.irish-guide .guide-banner-label { display: block; font-family: var(--font-ui); font-size: .68rem; font-weight: 500; letter-spacing: .13em; text-transform: uppercase; color: var(--sepia); margin-bottom: .5rem; }
+.irish-guide .guide-banner > strong { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); line-height: 1.4; }
+.irish-guide .guide-banner p { margin: .75rem 0 0; }
+.irish-guide .guide-banner-important { background: var(--ink); border-color: var(--border-strong); }
+.irish-guide .guide-banner-important .guide-banner-label { color: var(--gold-light); }
+.irish-guide .guide-banner-important > strong { color: var(--cream); font-size: 1.4rem; }
+.irish-guide .guide-banner-important p { color: var(--parchment); }
+.irish-guide .guide-banner-important a { color: var(--sepia-light); }
+.irish-guide .guide-contents { background: var(--parchment); border: 1px solid var(--border); padding: 1.6rem 1.8rem; margin: 2rem 0 3rem; }
+.irish-guide .guide-contents .panel-kicker { margin: 0 0 1rem; }
+.irish-guide .guide-contents ol { grid-template-columns: 1fr 1fr; column-gap: 1.7rem; margin: 0; }
+.irish-guide .guide-contents li { padding-left: 0; font-size: 1rem; }
+.irish-guide .guide-contents li::before { content: none; }
+.irish-guide .guide-table-wrap { max-width: 100%; overflow-x: auto; margin: 1.3rem 0; border: 1px solid var(--border); }
+.irish-guide .guide-table { width: 100%; border-collapse: collapse; font-size: 1.07rem; line-height: 1.55; text-align: left; }
+.irish-guide .guide-table caption { caption-side: top; padding: 1rem; font-family: var(--font-ui); font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; text-align: left; background: var(--parchment-dark); color: var(--ink-soft); }
+.irish-guide .guide-table th, .irish-guide .guide-table td { padding: .85rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.irish-guide .guide-table thead th { background: var(--parchment); font-family: var(--font-ui); font-weight: 500; font-size: .8rem; }
+.irish-guide .guide-table tbody th { font-weight: 600; width: 29%; }
+.irish-guide .church-coverage tbody th { width: 36%; }
+.irish-guide .guide-table tbody tr:last-child > * { border-bottom: 0; }
+.irish-guide .guide-note { font-size: .98rem; line-height: 1.65; }
+.irish-guide .record-counts { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border: 1px solid var(--border); background: var(--border); gap: 1px; margin: 1.5rem 0; }
+.irish-guide .record-counts div { background: var(--parchment); padding: 1.1rem .9rem; }
+.irish-guide .record-counts span { display: block; font-family: var(--font-ui); font-size: .65rem; text-transform: uppercase; letter-spacing: .06em; }
+.irish-guide .record-counts strong { display: block; font-family: var(--font-display); font-size: clamp(1.2rem, 1.9vw, 1.65rem); margin-top: .4rem; }
+.irish-guide .irish-intro-card { display: grid; grid-template-columns: .8fr 1.2fr; border: 1px solid var(--border); margin: 2rem 0; }
+.irish-guide .irish-example-label { display: flex; flex-direction: column; justify-content: center; padding: 2rem; background: var(--parchment-dark); }
+.irish-guide .irish-example-label > strong { display: block; font-family: var(--font-display); font-size: 2.1rem; font-weight: 400; line-height: 1.35; margin: 1rem 0; }
+.irish-guide .irish-example-label > span:last-child { font-family: var(--font-ui); font-size: .75rem; color: var(--ink-soft); line-height: 1.6; }
+.irish-guide .irish-intro-copy { padding: 1.8rem; background: var(--parchment); }
+.irish-guide .irish-intro-copy h3 { margin-top: 0; }
+.irish-guide .irish-intro-copy p:last-child { margin-bottom: 0; }
+.irish-guide .irish-flow { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); border: 1px solid var(--border); gap: 1px; background: var(--border); margin: 1.8rem 0 2.3rem; }
+.irish-guide .irish-flow div { text-align: center; padding: 1.1rem .45rem; background: var(--parchment); }
+.irish-guide .irish-flow span { display: block; font-family: var(--font-ui); font-size: .63rem; text-transform: uppercase; letter-spacing: .1em; color: var(--sepia); margin-bottom: .35rem; }
+.irish-guide .irish-flow strong { font-family: var(--font-display); font-size: 1rem; }
+.irish-guide .irish-steps { counter-reset: irish-step; gap: 1.2rem; margin: 1.75rem 0; }
+.irish-guide .irish-steps > li { counter-increment: irish-step; padding: 1.3rem 1.3rem 1.3rem 4rem; background: var(--parchment); border: 1px solid var(--border); }
+.irish-guide .irish-steps > li::before { content: counter(irish-step, decimal-leading-zero); top: 1.35rem; left: 1.15rem; font-family: var(--font-display); font-size: 1.2rem; color: var(--sepia); }
+.irish-guide .irish-steps h3 { margin: 0 0 .65rem; font-size: 1.25rem; }
+.irish-guide .irish-steps p:last-child { margin: 0; }
+.irish-guide .record-details { border-top: 1px solid var(--border-strong); margin-top: 1.75rem; }
+.irish-guide .record-details div { padding: .2rem 0 .35rem; border-bottom: 1px solid var(--border); }
+.irish-guide .record-details h3 { margin-top: 1rem; }
+.irish-guide .record-details p { margin-bottom: 1rem; }
+.irish-guide .irish-checklist { counter-reset: checklist; }
+.irish-guide .irish-checklist > li { counter-increment: checklist; padding-left: 1.75rem; }
+.irish-guide .irish-checklist > li::before { content: counter(checklist) '.'; color: var(--sepia); }
+.irish-guide .citation-example { margin: 1.5rem 0; padding: 1.3rem 1.5rem; background: var(--parchment); border-left: 3px solid var(--sepia-light); }
+.irish-guide .citation-example p:last-child { margin: 0; font-style: italic; }
+.irish-guide .guide-cta-inline { margin: 3rem 0; padding: 2.2rem; background: var(--sepia); color: var(--cream); }
+.irish-guide .guide-cta-inline .panel-kicker, .irish-guide .guide-cta-inline p { color: var(--cream); }
+.irish-guide .guide-cta-inline h2 { color: var(--cream); margin: .65rem 0 1rem; }
+.irish-guide .guide-cta-inline .btn { background: var(--cream); color: var(--ink); border-color: var(--cream); text-decoration: none; text-align: center; white-space: normal; }
+.irish-guide .guide-cta-inline .btn:hover { background: var(--parchment-dark); border-color: var(--parchment-dark); }
+.irish-guide .guide-cta-inline .cta-secondary { font-size: 1rem; margin: 1rem 0 0; }
+.irish-guide .guide-cta-inline .cta-secondary a { color: var(--cream); }
+.irish-guide .irish-faq { border-top: 1px solid var(--border-strong); }
+.irish-guide .irish-faq details { padding: 1.1rem 0; border-bottom: 1px solid var(--border); }
+.irish-guide .irish-faq summary { cursor: pointer; font-family: var(--font-display); font-size: 1.12rem; font-weight: 600; }
+.irish-guide .irish-faq details p { margin: .85rem 0 .25rem; }
+.irish-guide .guide-sources { border-top: 1px solid var(--border-strong); margin-top: 3rem; padding-top: .4rem; }
+.irish-guide .guide-sources > p, .irish-guide .guide-sources li { font-size: .97rem; line-height: 1.65; }
+.irish-guide .guide-sources ol { counter-reset: sources; }
+.irish-guide .guide-sources li { counter-increment: sources; padding-left: 1.8rem; }
+.irish-guide .guide-sources li::before { content: counter(sources) '.'; font-family: var(--font-ui); font-size: .75rem; top: .2rem; }
+.irish-guide .guide-sources li:target { background: var(--parchment-dark); outline: 4px solid var(--parchment-dark); }
+.irish-guide sup { font-family: var(--font-ui); font-size: .65em; white-space: nowrap; margin-left: .2em; }
+.irish-guide code { font-size: .88em; background: var(--parchment); padding: .08em .25em; }
+.irish-guide .sidebar-card { position: static; }
+.irish-guide .sidebar-card h3 { margin-top: 1.65rem; }
+.irish-guide .sidebar-card .link-list { margin-bottom: 1.6rem; }
+.irish-guide .sidebar-card .btn { white-space: normal; text-align: center; }
+.irish-guide :focus-visible { outline: 2px solid var(--sepia); outline-offset: 4px; }
+@media (max-width: 760px) {
+  .irish-guide .guide-contents ol { grid-template-columns: 1fr; }
+  .irish-guide .irish-intro-card { grid-template-columns: 1fr; }
+  .irish-guide .irish-example-label { padding: 1.5rem; }
+  .irish-guide .irish-example-label > strong { font-size: 1.8rem; }
+  .irish-guide .irish-example-label br { display: none; }
+  .irish-guide .irish-example-label br::after { content: ' '; }
+  .irish-guide .irish-intro-copy { padding: 1.5rem; }
+  .irish-guide .irish-flow { grid-template-columns: 1fr; }
+  .irish-guide .irish-flow div { display: flex; justify-content: space-between; align-items: center; padding: .8rem 1.15rem; text-align: left; }
+  .irish-guide .irish-flow span { margin: 0; }
+  .irish-guide .record-counts { grid-template-columns: 1fr; }
+  .irish-guide .record-counts div { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .irish-guide .record-counts strong { font-size: 1.5rem; margin: 0; }
+  .irish-guide .guide-banner, .irish-guide .guide-contents, .irish-guide .guide-cta-inline { padding: 1.4rem; }
+  .irish-guide .guide-table { font-size: .96rem; }
+  .irish-guide .guide-table th, .irish-guide .guide-table td { padding: .7rem .55rem; overflow-wrap: anywhere; }
+  .irish-guide .guide-table thead th { font-size: .7rem; }
+  .irish-guide .irish-steps > li { padding: 1.15rem 1.05rem 1.15rem 3.25rem; }
+  .irish-guide .irish-steps > li::before { left: .85rem; top: 1.2rem; font-size: 1.1rem; }
+}
+@media print {
+  .irish-guide .sidebar-card, .irish-guide .guide-contents, .irish-guide .guide-cta-inline { display: none; }
+  .irish-guide .content-grid { display: block; }
+  .irish-guide .prose { max-width: none; }
+  .irish-guide .guide-banner, .irish-guide .irish-steps > li, .irish-guide tr { break-inside: avoid; }
+  .irish-guide .guide-table-wrap { overflow: visible; }
+  .irish-guide .guide-banner-important { background: none; }
+  .irish-guide .guide-banner-important p, .irish-guide .guide-banner-important > strong { color: #1a1410; }
+}
