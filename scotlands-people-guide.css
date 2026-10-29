@@ -1,0 +1,71 @@
+/* Scotland's People article. Scoped so other site pages retain their original styling. */
+.scotlands-guide .page-hero-title { font-size: clamp(2rem,4.25vw,4.05rem); overflow-wrap: break-word; }
+.scotlands-guide .page-hero-sub { max-width: 780px; }
+.scotlands-guide .prose { min-width: 0; }
+.scotlands-guide [id] { scroll-margin-top: calc(var(--nav-h) + 1.5rem); }
+.scotlands-guide .prose h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: var(--ink); line-height: 1.4; margin: 1.85rem 0 .75rem; }
+.scotlands-guide .guide-banner { margin: 2.2rem 0; padding: 1.6rem 1.8rem; border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); background: var(--parchment); }
+.scotlands-guide .guide-banner-label { display:block; font-family:var(--font-ui); font-size:.68rem; font-weight:500; letter-spacing:.13em; text-transform:uppercase; color:var(--sepia); margin-bottom:.5rem; }
+.scotlands-guide .guide-banner > strong { font-family:var(--font-display); font-size:1.3rem; color:var(--ink); line-height:1.4; }
+.scotlands-guide .guide-banner p { margin:.7rem 0 0; }
+.scotlands-guide .guide-banner-important { background:var(--ink); border-color:var(--border-strong); }
+.scotlands-guide .guide-banner-important .guide-banner-label { color:var(--gold-light); }
+.scotlands-guide .guide-banner-important > strong { color:var(--cream); font-size:1.48rem; }
+.scotlands-guide .guide-banner-important p { color:var(--parchment); }
+.scotlands-guide .guide-contents { background:var(--parchment); border:1px solid var(--border); padding:1.6rem 1.8rem; margin:2rem 0 3rem; }
+.scotlands-guide .guide-contents .panel-kicker { margin:0 0 1rem; }
+.scotlands-guide .guide-contents ol { display:grid; grid-template-columns:1fr 1fr; column-gap:1.8rem; margin:0; }
+.scotlands-guide .guide-contents li { padding-left:0; font-size:1rem; }
+.scotlands-guide .guide-contents li::before { content:none; }
+.scotlands-guide .guide-table-wrap { max-width:100%; overflow-x:auto; margin:1.3rem 0 1.6rem; border:1px solid var(--border); }
+.scotlands-guide .guide-table { width:100%; border-collapse:collapse; text-align:left; font-size:1.04rem; line-height:1.5; }
+.scotlands-guide .guide-table caption { caption-side:top; padding:.95rem 1rem; font-family:var(--font-ui); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; text-align:left; background:var(--parchment-dark); color:var(--ink-soft); }
+.scotlands-guide .guide-table th,.scotlands-guide .guide-table td { padding:.9rem 1rem; border-bottom:1px solid var(--border); vertical-align:top; }
+.scotlands-guide .guide-table thead th { font-family:var(--font-ui); font-size:.8rem; font-weight:500; background:var(--parchment); }
+.scotlands-guide .guide-table tbody th { width:36%; font-weight:600; }
+.scotlands-guide .guide-table tr:last-child > * { border-bottom:0; }
+.scotlands-guide .record-details { border-top:1px solid var(--border-strong); margin-top:1.7rem; }
+.scotlands-guide .record-details > div { padding: .2rem 0 .35rem; border-bottom:1px solid var(--border); }
+.scotlands-guide .record-details h3 { margin-top:1rem; }
+.scotlands-guide .record-details p { margin-bottom:1rem; }
+.scotlands-guide .scots-steps { counter-reset:scots-step; margin:1.7rem 0 2rem; }
+.scotlands-guide .scots-steps > li { counter-increment:scots-step; padding:1.35rem 1.35rem 1.35rem 4rem; background:var(--parchment); border:1px solid var(--border); margin-bottom:1rem; }
+.scotlands-guide .scots-steps > li::before { content:counter(scots-step,decimal-leading-zero); left:1.1rem; top:1.35rem; font-family:var(--font-display); font-size:1.2rem; color:var(--sepia); }
+.scotlands-guide .scots-steps h3 { margin:0 0 .6rem; font-size:1.25rem; }
+.scotlands-guide .scots-steps p:last-child { margin:0; }
+.scotlands-guide .scots-screenshot { margin:2.25rem 0 2.6rem; border:1px solid var(--border); background:var(--parchment); }
+.scotlands-guide .scots-screenshot-placeholder { min-height:224px; padding:2rem 1.5rem; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.55rem; background: repeating-linear-gradient(-45deg, var(--parchment), var(--parchment) 12px, var(--parchment-dark) 12px, var(--parchment-dark) 13px); text-align:center; color:var(--ink-soft); }
+.scotlands-guide .scots-screenshot-placeholder .shot-label { font-family:var(--font-ui); text-transform:uppercase; font-size:.66rem; letter-spacing:.2em; color:var(--sepia); font-weight:500; }
+.scotlands-guide .scots-screenshot-placeholder strong { font-family:var(--font-display); font-size:clamp(1.2rem,2vw,1.5rem); font-weight:600; color:var(--ink); }
+.scotlands-guide .scots-screenshot-placeholder > span:last-child { font-family:var(--font-ui); font-size:.8rem; }
+.scotlands-guide .scots-screenshot img { display:block; width:100%; height:auto; }
+.scotlands-guide .scots-screenshot figcaption { padding:.9rem 1.15rem; font-size:.94rem; font-style:italic; color:var(--ink-soft); line-height:1.6; }
+.scotlands-guide .citation-example { margin:1.4rem 0; padding:1.3rem 1.5rem; background:var(--parchment); border-left:3px solid var(--sepia-light); }
+.scotlands-guide .citation-example p:last-child { margin:0; font-style:italic; }
+.scotlands-guide .scots-help-note { margin:2.8rem 0; padding:1.55rem 1.85rem; background:var(--parchment); border-left:3px solid var(--sepia); }
+.scotlands-guide .scots-help-note .panel-kicker { margin-bottom:.5rem; }
+.scotlands-guide .scots-help-note h2 { margin:.3rem 0 .75rem; font-size:1.65rem; }
+.scotlands-guide .scots-help-note p:last-child { margin-bottom:0; }
+.scotlands-guide .scots-faq { border-top:1px solid var(--border-strong); }
+.scotlands-guide .scots-faq details { padding:1.15rem 0; border-bottom:1px solid var(--border); }
+.scotlands-guide .scots-faq summary { cursor:pointer; font-family:var(--font-display); font-size:1.12rem; font-weight:600; }
+.scotlands-guide .scots-faq details p { margin:.85rem 0 .25rem; }
+.scotlands-guide .scots-sources { border-top:1px solid var(--border-strong); margin-top:3rem; padding-top:.4rem; }
+.scotlands-guide .scots-sources > p, .scotlands-guide .scots-sources li { font-size:.95rem; line-height:1.65; }
+.scotlands-guide .sidebar-card { position:static; }
+.scotlands-guide .sidebar-card h3 { margin-top:1.7rem; }
+.scotlands-guide .sidebar-card .link-list { margin-bottom:1.6rem; }
+.scotlands-guide .sidebar-minor-link { font-family:var(--font-ui); font-size:.85rem; margin-top:1.4rem; }
+.scotlands-guide code { font-size:.88em; background:var(--parchment); padding:.08em .25em; }
+.scotlands-guide :focus-visible { outline:2px solid var(--sepia); outline-offset:3px; }
+@media(max-width:760px){
+ .scotlands-guide .guide-contents ol { grid-template-columns:1fr; }
+ .scotlands-guide .guide-banner,.scotlands-guide .guide-contents,.scotlands-guide .scots-help-note { padding:1.3rem; }
+ .scotlands-guide .guide-table { font-size:.94rem; }
+ .scotlands-guide .guide-table th,.scotlands-guide .guide-table td { padding:.7rem .55rem; overflow-wrap:anywhere; }
+ .scotlands-guide .guide-table thead th { font-size:.7rem; }
+ .scotlands-guide .scots-steps > li { padding:1.1rem 1rem 1.1rem 3.25rem; }
+ .scotlands-guide .scots-steps > li::before { left:.85rem; top:1.1rem; }
+ .scotlands-guide .scots-screenshot-placeholder { min-height:185px; }
+}
+@media print { .scotlands-guide .sidebar-card,.scotlands-guide .guide-contents,.scotlands-guide .scots-help-note { display:none; } .scotlands-guide .content-grid { display:block; } .scotlands-guide .prose { max-width:none; } .scotlands-guide .guide-banner,.scotlands-guide .scots-screenshot,.scotlands-guide tr { break-inside:avoid; } .scotlands-guide .guide-table-wrap { overflow:visible; } .scotlands-guide .guide-banner-important { background:none; } .scotlands-guide .guide-banner-important p,.scotlands-guide .guide-banner-important > strong { color:var(--ink); } }
