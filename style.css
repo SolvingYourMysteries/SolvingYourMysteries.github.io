@@ -3012,3 +3012,28 @@ body {
 .regional-feature-copy .body-text a:hover {
   color: var(--gold);
 }
+/* ---- COMPACT HOMEPAGE EMAIL SIGN-UP ----------------------- */
+.signup-strip { padding: 1.35rem 0; }
+.signup-strip-inner { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(330px, 1.3fr); align-items: center; gap: 2rem; }
+.signup-strip-copy h2 { color: var(--cream); font-family: var(--font-display); font-size: clamp(1.15rem, 2vw, 1.55rem); font-weight: 400; line-height: 1.3; margin: 0 0 0.3rem; }
+.signup-strip-copy p { color: rgba(245,240,232,0.78); font-family: var(--font-ui); font-size: 0.8rem; font-weight: 300; line-height: 1.5; }
+.signup-strip-control { min-width: 0; }
+.signup-strip-fields { display: flex; gap: 0.65rem; align-items: stretch; }
+.signup-strip-fields .form-input { flex: 1; min-width: 0; height: 48px; padding: 0.75rem 0.95rem; background: var(--cream); border-color: var(--sepia-light); font-family: var(--font-ui); font-size: 0.9rem; }
+.signup-strip-fields .btn { flex: 0 0 auto; min-height: 48px; padding: 0.75rem 1.55rem; border-color: var(--sepia-light); background: var(--sepia-light); color: var(--ink); }
+.signup-strip-fields .btn:hover { background: var(--cream); border-color: var(--cream); }
+.signup-strip-fields .btn:disabled { opacity: 0.65; cursor: wait; }
+.signup-strip-note, .signup-strip-status { margin: 0.35rem 0 0; font-family: var(--font-ui); font-size: 0.72rem; line-height: 1.55; color: rgba(245,240,232,0.72); }
+.signup-strip-note a, .signup-strip-status a { text-decoration: underline; text-underline-offset: 2px; color: var(--cream); }
+.signup-strip iframe[hidden], .signup-strip-status[hidden] { display: none !important; }
+.signup-strip .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.signup-strip input:focus-visible, .signup-strip button:focus-visible, .signup-strip a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
+@media (max-width: 850px) {
+  .signup-strip-inner { grid-template-columns: 1fr; gap: 0.8rem; }
+}
+@media (max-width: 500px) {
+  .signup-strip { padding: 1.3rem 0; }
+  .signup-strip-inner { padding: 0 1rem; }
+  .signup-strip-fields { flex-direction: column; gap: 0.55rem; }
+  .signup-strip-fields .btn, .signup-strip-fields .form-input { width: 100%; }
+}

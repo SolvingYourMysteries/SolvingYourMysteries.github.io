@@ -290,29 +290,26 @@
 </div>
 </div>
 </section>
-<!-- INTRO STRIP -->
-<section class="intro-strip">
-<div class="intro-strip-inner">
-<div class="strip-item reveal">
-<span class="strip-number">01</span>
-<p>Family Tree Reports</p>
-</div>
-<div class="strip-divider"></div>
-<div class="strip-item reveal">
-<span class="strip-number">02</span>
-<p>Records Research</p>
-</div>
-<div class="strip-divider"></div>
-<div class="strip-item reveal">
-<span class="strip-number">03</span>
-<p>Brick Wall Breakthroughs</p>
-</div>
-<div class="strip-divider"></div>
-<div class="strip-item reveal">
-<span class="strip-number">04</span>
-<p>DNA Analysis Support</p>
-</div>
-</div>
+<!-- HOMEPAGE EMAIL UPDATES: compact sign-up in the former services strip -->
+<section class="intro-strip signup-strip" id="updates" aria-labelledby="updates-heading">
+  <div class="intro-strip-inner signup-strip-inner">
+    <div class="signup-strip-copy">
+      <h2 id="updates-heading">New genealogy guides by email</h2>
+      <p>I'll email you when I publish a new guide or website update.</p>
+    </div>
+    <div class="signup-strip-control">
+      <form id="updatesForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMgVOChPDBPofSV0i2tpe76Zp_eKzXGoPeT7T17kHKPw1Qzw/formResponse" method="post" target="_blank">
+        <label class="sr-only" for="updatesEmail">Email address</label>
+        <div class="signup-strip-fields">
+          <input class="form-input" id="updatesEmail" name="emailAddress" type="email" autocomplete="email" required placeholder="Your email address" aria-describedby="updates-privacy" />
+          <button class="btn btn-primary" id="updatesSubmit" type="submit">Sign up</button>
+        </div>
+      </form>
+      <p class="signup-strip-note" id="updates-privacy">Occasional emails only. You can unsubscribe by replying. <a href="privacy.html">Privacy notice</a>.</p>
+      <p class="signup-strip-status" id="updatesStatus" aria-live="polite" role="status" hidden></p>
+      <iframe name="updatesSubmissionFrame" id="updatesSubmissionFrame" title="Sign-up submission" hidden></iframe>
+    </div>
+  </div>
 </section>
 <!-- FEATURED RESEARCH GUIDE -->
 <section class="notice-strip" aria-label="Featured DNA research guide">
@@ -739,6 +736,7 @@ Updates came regularly, and each piece of information was explained in a clear w
 <li><a href="case-studies.html">Case Studies</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="/#faq">FAQ</a></li>
+<li><a href="#updates">Email Updates</a></li>
 <li><a href="/#enquire">Contact</a></li>
 <li><a href="privacy.html">Privacy</a></li>
 </ul>
@@ -776,6 +774,35 @@ Updates came regularly, and each piece of information was explained in a clear w
 </div>
 </div>
 </footer>
+<script>
+/* Submit the compact sign-up to Google Forms without embedding its interface. */
+(function () {
+  var form = document.getElementById('updatesForm');
+  var frame = document.getElementById('updatesSubmissionFrame');
+  var button = document.getElementById('updatesSubmit');
+  var status = document.getElementById('updatesStatus');
+  if (!form || !frame || !button || !status) return;
+  var pending = false;
+
+  form.addEventListener('submit', function () {
+    if (!form.checkValidity()) return;
+    form.target = frame.name;
+    pending = true;
+    button.disabled = true;
+    button.textContent = 'Sending…';
+    status.hidden = true;
+  });
+
+  frame.addEventListener('load', function () {
+    if (!pending) return;
+    pending = false;
+    button.disabled = false;
+    button.textContent = 'Sign up';
+    status.hidden = false;
+    status.innerHTML = 'Thank you for signing up! You will receive an email when a new guide is published.';
+  });
+})();
+</script>
 <script defer="" src="main.js"></script>
 <script>
     window.goatcounter = {
