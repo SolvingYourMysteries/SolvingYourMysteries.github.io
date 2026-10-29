@@ -301,7 +301,7 @@
       <form id="updatesForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdMgVOChPDBPofSV0i2tpe76Zp_eKzXGoPeT7T17kHKPw1Qzw/formResponse" method="post" target="_blank">
         <label class="sr-only" for="updatesEmail">Email address</label>
         <div class="signup-strip-fields">
-          <input class="form-input" id="updatesEmail" name="emailAddress" type="email" autocomplete="email" required placeholder="Your email address" aria-describedby="updates-privacy" />
+          <input class="form-input" id="updatesEmail" name="entry.168581457" type="email" autocomplete="email" required placeholder="Your email address" aria-describedby="updates-privacy" />
           <button class="btn btn-primary" id="updatesSubmit" type="submit">Sign up</button>
         </div>
       </form>
@@ -799,6 +799,7 @@ Updates came regularly, and each piece of information was explained in a clear w
     button.disabled = false;
     button.textContent = 'Sign up';
     status.hidden = false;
+    /* An iframe load proves the POST navigated, not that Google saved the answer. */
     status.innerHTML = 'Thank you for signing up! You will receive an email when a new guide is published.';
   });
 })();
