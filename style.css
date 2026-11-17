@@ -291,12 +291,12 @@ iframe { display: block; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(160deg, rgba(10, 7, 5, 0.82) 0%, rgba(26, 20, 16, 0.78) 100%),
+    linear-gradient(160deg, rgba(10, 7, 5, 0.75) 0%, rgba(26, 20, 16, 0.65) 100%),
     linear-gradient(rgba(139,111,71,0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(139,111,71,0.06) 1px, transparent 1px);
   background-size: auto, 60px 60px, 60px 60px;
   filter: none; /* important — cancels the blur on the overlay itself */
-  mask-image: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
 }
 
 .hero-bg::after {
@@ -352,7 +352,7 @@ iframe { display: block; }
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.75;
-  color: var(--cream);
+  color: rgba(245,240,232,0.7);
   max-width: 560px;
   margin: 0 auto 2.5rem;
 }
@@ -579,8 +579,7 @@ iframe { display: block; }
 .service-card-icon svg {
   color: inherit;
 }
-.service-card h3,
-.service-card h4 {
+.service-card h3 {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: 600;
@@ -1008,7 +1007,7 @@ iframe { display: block; }
   font-family: var(--font-body);
   font-size: 1.15rem;
   font-weight: 300;
-  color: var(--cream);
+  color: rgba(245,240,232,0.65);
   max-width: 560px;
   margin-top: 1.25rem;
   line-height: 1.75;
@@ -2415,7 +2414,6 @@ body {
 .footer-social-handle,
 .footer-links a,
 .service-card h3,
-.service-card h4,
 .value-card h3,
 .resource-card h2,
 .prose,
@@ -3022,27 +3020,6 @@ body {
 .signup-strip-control { min-width: 0; }
 .signup-strip-fields { display: flex; gap: 0.65rem; align-items: stretch; }
 .signup-strip-fields .form-input { flex: 1; min-width: 0; height: 48px; padding: 0.75rem 0.95rem; background: var(--cream); border-color: var(--sepia-light); font-family: var(--font-ui); font-size: 0.9rem; }
-
-/* Clear routes into research and contact */
-.hero-actions .btn-primary { background: var(--cream); border-color: var(--cream); color: var(--ink); }
-.hero-actions .btn-primary:hover { background: var(--parchment-dark); border-color: var(--parchment-dark); }
-.services-intro { max-width: 42rem; margin: 0 auto; color: var(--ink-soft); font-size: 1.2rem; line-height: 1.6; }
-.service-group + .service-group { margin-top: 2.75rem; }
-.service-group-title { margin-bottom: 1rem; font-family: var(--font-display); font-size: clamp(1.4rem, 2.3vw, 1.8rem); font-weight: 600; color: var(--ink); }
-.service-group .services-grid { margin-bottom: 0; }
-.services-preview-cta { margin-top: 3rem; }
-.enquire-pricing { margin-top: 2rem; max-width: 42ch; color: var(--ink-soft); line-height: 1.65; }
-.enquire-email { color: var(--ink-soft); line-height: 1.6; }
-.enquire-pricing a, .enquire-email a, .form-follow-up a { color: var(--ink); text-decoration: underline; text-underline-offset: 0.18em; overflow-wrap: anywhere; }
-.form-follow-up { margin-top: 1rem; }
-.hero-title, .section-title, .service-group-title { text-wrap: balance; }
-.hero-subtitle, .services-intro, .enquire-pricing { text-wrap: pretty; }
-
-@media (max-width: 900px) {
-  .services-subnav { position: static; }
-  .services-subnav-list { flex-wrap: wrap; overflow: visible; padding: 0.5rem 0; }
-  .services-subnav-list a { display: flex; align-items: center; min-height: 44px; padding: 0.7rem 1rem; white-space: normal; }
-}
 .signup-strip-fields .btn { flex: 0 0 auto; min-height: 48px; padding: 0.75rem 1.55rem; border-color: var(--sepia-light); background: var(--sepia-light); color: var(--ink); }
 .signup-strip-fields .btn:hover { background: var(--cream); border-color: var(--cream); }
 .signup-strip-fields .btn:disabled { opacity: 0.65; cursor: wait; }
